@@ -12,7 +12,10 @@ export function Sidebar() {
   const view = useNotes((s) => s.view)
   const setView = useNotes((s) => s.setView)
   const [name, setName] = useState('')
+  const [adding, setAdding] = useState(false)
   const tags = allTags(notes)
+  const shownTags = tags.slice(0, 6)
+  const extra = tags.length - shownTags.length
 
   return (
     <aside className="sidebar t-panel-reveal" data-state="in">
@@ -35,7 +38,17 @@ export function Sidebar() {
       </div>
 
       <section>
-        <h2>Collections</h2>
+        <div className="side-head">
+          <h2>Collections</h2>
+          <button
+            type="button"
+            className="side-add"
+            aria-label="Add collection"
+            onClick={() => setAdding((v) => !v)}
+          >
+            +
+          </button>
+        </div>
         <button
           type="button"
           className={`side-item${!activeCollectionId && !activeTag ? ' is-active' : ''}`}
@@ -45,6 +58,7 @@ export function Sidebar() {
           }}
         >
           All cards
+          <span className="count">{notes.length}</span>
         </button>
         {collections.map((c) => (
           <button
@@ -60,30 +74,34 @@ export function Sidebar() {
             </span>
           </button>
         ))}
-        <form
-          className="add-col"
-          onSubmit={(e) => {
-            e.preventDefault()
-            addCollection(name)
-            setName('')
-          }}
-        >
-          <input
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            placeholder="New collection"
-            aria-label="New collection name"
-          />
-          <button type="submit" className="btn tiny">
-            Add
-          </button>
-        </form>
+        {adding && (
+          <form
+            className="add-col"
+            onSubmit={(e) => {
+              e.preventDefault()
+              addCollection(name)
+              setName('')
+              setAdding(false)
+            }}
+          >
+            <input
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              placeholder="Collection name"
+              aria-label="New collection name"
+              autoFocus
+            />
+            <button type="submit" className="btn tiny">
+              Add
+            </button>
+          </form>
+        )}
       </section>
 
       <section>
         <h2>Tags</h2>
         <div className="tag-cloud">
-          {tags.map((t) => (
+          {shownTags.map((t) => (
             <button
               key={t}
               type="button"
@@ -93,6 +111,18 @@ export function Sidebar() {
               {t}
             </button>
           ))}
+          {extra > 0 && !activeTag && (
+            <span className="tag-more muted">{extra} more</span>
+          )}
+          {activeTag && !shownTags.includes(activeTag) && (
+            <button
+              type="button"
+              className="tag-chip is-active"
+              onClick={() => setTagFilter(null)}
+            >
+              {activeTag}
+            </button>
+          )}
           {tags.length === 0 && <p className="muted">No tags yet</p>}
         </div>
       </section>

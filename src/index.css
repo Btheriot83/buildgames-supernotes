@@ -348,6 +348,15 @@ button { cursor: pointer; }
   font-family: var(--font-body);
 }
 .sidebar h2:first-of-type { margin-top: 0.75rem; }
+.side-head { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; }
+.side-head h2 { margin: 0.75rem 0 0.45rem; }
+.side-add {
+  border: 0; background: transparent; color: var(--mute);
+  font-size: 1.1rem; line-height: 1; padding: 0.2rem 0.35rem; border-radius: 6px;
+  font-weight: 500;
+}
+.side-add:hover { color: var(--ink); background: var(--paper); }
+.tag-more { font-size: 0.72rem; padding: 0.2rem 0.15rem; align-self: center; }
 
 .view-tabs {
   display: grid; grid-template-columns: 1fr 1fr;
