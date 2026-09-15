@@ -782,10 +782,14 @@ button { cursor: pointer; }
 .note-card { min-height: 188px; background: var(--paper-card); }
 .note-card p { color: var(--ink-soft); }
 
-/* B3 flat materials guard — no decorative gradients in chrome */
-.ink-bg, .app-shell, .shell-chrome, .sidebar, .desk-status, .job-strip, .btn, .note-card, .search-input {
+/* B4 flat materials guard — no decorative gradients in chrome */
+.ink-bg, .app-shell, .shell-chrome, .sidebar, .desk-status, .job-strip, .btn, .note-card, .search-input, .editor-panel, .ai-assist {
   background-image: none;
 }
+.ink-grain {
+  /* grain SVG noise only; not a color gradient wash */
+}
+
 
 @media (max-width: 640px) {
   .search-input { padding-right: 1rem; padding-bottom: 2.2rem; }

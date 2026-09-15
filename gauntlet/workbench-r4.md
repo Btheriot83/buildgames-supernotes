@@ -145,3 +145,9 @@ Bar baseline: `gauntlet/shots-r4/bar-supernotes-home.png`
 - verdict: Tags hold on paper like dream-target; bar product tags still cooler/lighter.
 - commit: 7af7c3e
 
+## r20 — bar gap (+ bar A/B + dream vs live)
+- files: src/index.css (B4 flat materials guard)
+- shot: gauntlet/shots-r4/r20-desk.png; A/B gauntlet/shots-r4/r20-ab.png; dream vs live gauntlet/shots-r4/r20-dream-vs-live.png
+- verdict: Live closed toward dream-target on job strip/type/density/buttons; bar marketing still wins serenity; Index Drawer locked; 0 decorative gradients.
+- commit: 6df1059
+
