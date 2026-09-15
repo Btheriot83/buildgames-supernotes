@@ -32,3 +32,10 @@ Bar baseline: `gauntlet/shots-r4/bar-supernotes-home.png`
 - verdict: Wordmark lighter/tighter like bar Gelica 400; still Literata (identity). Bar wins on proprietary face.
 - commit: d2e90ef
 
+## r2 — bar gap (transitions on real actions)
+- files: src/components/Toast.tsx, src/components/SuccessOverlay.tsx, src/store/notesStore.ts, src/styles/transitions.css
+- shot: gauntlet/shots-r4/r2-toast-restore.png
+- recipes: toast←create/delete/restore/export; success-check←Export Markdown; error-state-shake←zero-hit search + empty export/collection
+- verdict: Interaction feedback closer to bar polish; still denser tool UI than marketing serenity.
+- commit: 31ec491
+

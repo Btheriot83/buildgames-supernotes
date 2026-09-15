@@ -13,6 +13,7 @@ export function SuccessOverlay() {
             strokeWidth="3"
             strokeLinecap="round"
             strokeLinejoin="round"
+            pathLength={100}
           />
         </svg>
       </span>
