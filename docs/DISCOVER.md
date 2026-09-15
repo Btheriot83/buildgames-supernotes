@@ -1,44 +1,40 @@
 # DISCOVER — Inkwell (Supernotes replacement)
 
-Generated: 2026-09-14 evening PT · Gauntlet + Anshu enforcement pass
+Generated: 2026-09-14 evening PT · Anshu eight-technique pass
 
-## Seed (docs only — never in UI)
+## Technique 1 — Seed
 ```
 c50557079eefdee558740a74c47cc6930e871658bc8daf1db299aaef547e4ef3
 ```
-Source: `openssl rand -hex 32`
+Source: `openssl rand -hex 32` · never shown in UI.
 
 ### Subpattern derivation
 Hex chunks: `c50557` `079eef` `dee558` `740a74` `c47cc6`
-- Forced hue bands outside the 200–290° AI-purple trap → olive (~105°) + brass (~38°) + warm paper.
-- Discarded raw `c47cc6` violet as an accent (classic vibe-purple tell).
-- Layout cue from even/odd nibbles: asymmetric desk (sidebar rail + airy card field), not centered SaaS hero.
-- Motion cue: paper tilt on cards, panel slide for editor — physical desk, not glassmorphic float.
+- Hue bands forced outside 200–290° AI-purple → olive (~105°) + brass (~38°) + warm paper.
+- Discarded raw `c47cc6` violet accent.
+- Layout from parity: asymmetric desk (sidebar rail + airy card field), not centered SaaS hero.
+- Motion: paper tilt + ink-path draw on link suggest (not glass float).
 
-## Feel (sensory)
-The desk should feel like clearing a wooden table for a stack of cream index cards after rain: dry paper under the thumb, brass clip catching window light, ink that has already dried. Quiet enough to think. Linking should feel like drawing a pencil line between two cards — not opening a “knowledge graph product.”
+## Technique 2 — Ambitious idea list → taste steering
 
-Wild references held in mind (not literal skins):
-- A stationery shop drawer of coloured stock
-- Analogue zettelkasten boxes photographed for a design magazine
-- A museum label card, serif title, generous margins
-- Supernotes’ own marketing serenity (light, serif headline, coral CTA) — borrow the *calm*, not the landing-page template
+Broad design-language sparks (imagination only):
+1. Stationery shop drawer of coloured stock
+2. Museum label cards, serif titles, generous margins
+3. Analogue zettelkasten box photographed for a magazine
+4. Wet ink bleeding on blotter paper (too messy)
+5. Blueprint drafting table with pins (stolen by Milanote lane)
+6. Rain-cleared wooden table, cream cards drying in window light
+7. Brass letterpress chase with locked type (ornamental risk)
+8. Soft coral ribbon on a desk blotter (Supernotes cousin)
+9. Library call-slip stubs in a oak tray
+10. Field notebook with graphite fingerprints
 
-## Direction briefs (2–3 bold)
+**Feel notes (lead taste):** Want the dry paper under the thumb after rain. Quiet enough to think. Linking = pencil line between two cards, not a “knowledge graph product.” Avoid tacky mint neon, glass panels, Fraunces-on-everything, and landing-page dual CTAs on an app desk.
 
-### A. **Index Drawer** (ambitious pick)
-Light warm paper field, Literata titles on cards only, Source Sans UI, coral action (from Supernotes bar family but denser app chrome), olive/brass collection dots, real desk photography for empty state. Core job: linked notecards + AI auto-tag / summarize / suggest [[links]].
-
-### B. **Night Press** (discarded)
-Deep ink navy + mint glow + Fraunces everywhere — the *previous* Inkwell ship. Feels vibe-coded against ANTI_SLOP (Fraunces-as-UI, glass sidebar, radial washes). Strong atmosphere, weak against live Supernotes calm.
-
-### C. **Atlas Ledger** (discarded)
-Cartographic cream + copper stamps + ruled margins. Beautiful as a print system; too ornamental for fast capture; competes with the linking job.
+### Direction briefs
+**A. Index Drawer (pick)** — Light warm paper, Literata on card titles only, Source Sans UI, coral action, olive/brass dots, real desk photo + ambient loop, AI tag/tighten/find-links.
+**B. Night Press (discard)** — Deep ink + mint glow + Fraunces UI. Prior ship; vibe-coded vs ANTI_SLOP; loses blind bar to Supernotes calm.
+**C. Atlas Ledger (discard)** — Cartographic cream + copper stamps. Pretty print system; slows capture.
 
 ## Pick
-**A — Index Drawer.** It wins the blind bar against https://supernotes.app/ on calm light UI while still being a *desk*, not a marketing page. Night Press is the honest baseline (~3.8) we are escaping.
-
-## Discarded (why)
-- Night Press: AI tells cluster (glass, glow, Fraunces-everywhere, perma-dark grey body).
-- Atlas Ledger: decoration over linking speed.
-- Any purple/indigo CTA band from seed leftovers.
+**A — Index Drawer.** Serves linked notecards; wins calm against https://supernotes.app/ without cloning the marketing page.

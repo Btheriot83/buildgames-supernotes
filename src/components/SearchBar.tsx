@@ -35,7 +35,7 @@ export function SearchBar() {
         className="search-input t-clear"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
-        placeholder="Search title, body, tags — /"
+        placeholder="Find a card — press /"
         autoComplete="off"
       />
       {query && (

@@ -9,6 +9,7 @@ import {
   type AiTags,
 } from '../lib/aiAssist'
 import { allTags, useNotes } from '../store/notesStore'
+import { LinkDraw } from './LinkDraw'
 
 export function EditorPanel() {
   const open = useNotes((s) => s.editorOpen)
@@ -42,7 +43,7 @@ export function EditorPanel() {
     try {
       const out = await summarizeCard(note.title, note.body)
       setSummary(out)
-      showToast(out.mode === 'llm' ? `Summary · ${out.provider}` : 'Summary · local craft')
+      showToast(out.mode === 'llm' ? 'Tightened' : 'Tightened on-desk')
     } finally {
       setBusy(null)
     }
@@ -56,7 +57,7 @@ export function EditorPanel() {
       setTagResult(out)
       const merged = [...new Set([...note.tags, ...out.tags])].slice(0, 12)
       updateNote(note.id, { tags: merged })
-      showToast(out.mode === 'llm' ? `Tagged · ${out.provider}` : 'Tagged · local craft')
+      showToast(out.mode === 'llm' ? 'Tags applied' : 'Tags from the text')
     } finally {
       setBusy(null)
     }
@@ -68,7 +69,7 @@ export function EditorPanel() {
     try {
       const out = await suggestLinks(note, notes)
       setLinkResult(out)
-      showToast(out.mode === 'llm' ? `Links · ${out.provider}` : 'Links · local craft')
+      showToast(out.mode === 'llm' ? 'Links found' : 'Nearby cards')
     } finally {
       setBusy(null)
     }
@@ -183,15 +184,16 @@ export function EditorPanel() {
               className="editor-body"
               value={note.body}
               onChange={(e) => updateNote(note.id, { body: e.target.value })}
-              placeholder="Write the card. Link with [[Other card title]]."
+              placeholder="One idea. Link with [[Another card]]."
               spellCheck
             />
 
             <section className="ai-assist" aria-label="AI card assist">
-              <h3>Link &amp; polish</h3>
+              <h3>Sharpen this card</h3>
               <p className="ai-meta">
-                Auto-tag · summarize · suggest [[links]] — API when keyed, local craft otherwise
+                Tag it. Tighten it. Find the cards it should touch.
               </p>
+              <LinkDraw active={Boolean(linkResult && linkResult.links.length)} />
               <div className="ai-actions">
                 <button
                   type="button"
@@ -199,7 +201,7 @@ export function EditorPanel() {
                   disabled={busy !== null}
                   onClick={() => void runAutotag()}
                 >
-                  {busy === 'autotag' ? 'Tagging…' : 'Auto-tag'}
+                  {busy === 'autotag' ? 'Reading…' : 'Tag'}
                 </button>
                 <button
                   type="button"
@@ -207,7 +209,7 @@ export function EditorPanel() {
                   disabled={busy !== null}
                   onClick={() => void runSummarize()}
                 >
-                  {busy === 'summarize' ? 'Summarizing…' : 'Summarize'}
+                  {busy === 'summarize' ? 'Tightening…' : 'Tighten'}
                 </button>
                 <button
                   type="button"
@@ -215,30 +217,30 @@ export function EditorPanel() {
                   disabled={busy !== null}
                   onClick={() => void runLinks()}
                 >
-                  {busy === 'link' ? 'Finding…' : 'Suggest links'}
+                  {busy === 'link' ? 'Tracing…' : 'Find links'}
                 </button>
               </div>
               {summary && (
                 <div className="ai-result">
-                  <strong>{summary.mode === 'llm' ? 'LLM summary' : 'Local summary'}</strong>
+                  <strong>Tightened</strong>
                   <p style={{ margin: '0.35rem 0' }}>{summary.summary}</p>
                   <button type="button" className="btn tiny" onClick={applySummary}>
-                    Pin to card
+                    Keep on card
                   </button>
                 </div>
               )}
               {tagResult && (
                 <div className="ai-result">
-                  <strong>{tagResult.mode === 'llm' ? 'LLM tags' : 'Local tags'}</strong>
+                  <strong>Suggested tags</strong>
                   <p style={{ margin: '0.35rem 0' }}>{tagResult.tags.join(' · ') || '—'}</p>
                 </div>
               )}
               {linkResult && (
                 <div className="ai-result">
-                  <strong>{linkResult.mode === 'llm' ? 'LLM links' : 'Local links'}</strong>
+                  <strong>Nearby cards</strong>
                   {linkResult.links.length === 0 ? (
                     <p className="muted" style={{ margin: '0.35rem 0 0' }}>
-                      No strong matches yet — write a bit more or add another card.
+                      Quiet desk — write a little more, or add another card.
                     </p>
                   ) : (
                     <ul>
@@ -264,7 +266,7 @@ export function EditorPanel() {
                 </span>
               </h3>
               {links.length === 0 ? (
-                <p className="muted">No cards link here yet. Mention this title with [[…]].</p>
+                <p className="muted">Nothing points here yet. Name this card from another with [[…]].</p>
               ) : (
                 <ul>
                   {links.map((l) => (

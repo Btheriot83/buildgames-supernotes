@@ -13,23 +13,36 @@ export function CardGrid() {
   if (notes.length === 0) {
     return (
       <div className="empty-state">
-        <img
-          src="/art/empty-desk.png"
-          alt="Blank notecards and a fountain pen on a wooden desk"
-          width={840}
-          height={472}
-          onError={(e) => {
-            ;(e.currentTarget as HTMLImageElement).style.display = 'none'
-          }}
-        />
-        <h3>{hasFilters ? 'Nothing matches' : 'Desk is clear'}</h3>
+        <div className="empty-media">
+          <video
+            className="empty-video"
+            autoPlay
+            muted
+            loop
+            playsInline
+            poster="/art/empty-desk.png"
+            onError={(e) => {
+              ;(e.currentTarget as HTMLVideoElement).style.display = 'none'
+            }}
+          >
+            <source src="/art/empty-desk-loop.mp4" type="video/mp4" />
+          </video>
+          <img
+            className="empty-fallback"
+            src="/art/empty-desk.png"
+            alt=""
+            width={840}
+            height={472}
+          />
+        </div>
+        <h3>{hasFilters ? 'No cards here' : 'Clear desk'}</h3>
         <p>
           {hasFilters
-            ? 'Clear search or filters, or start a fresh card.'
-            : 'One idea per card. Link with [[titles]]. Auto-tag and summarize when you need a polish.'}
+            ? 'Loosen search or filters — or jot a fresh card.'
+            : 'One thought per card. Pencil a [[link]]. Let the desk suggest the rest.'}
         </p>
         <button type="button" className="btn solid" onClick={createNote}>
-          New card
+          Start a card
         </button>
       </div>
     )

@@ -151,6 +151,11 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     }
     return res.status(400).json({ error: 'unknown action' })
   } catch (err) {
-    return res.status(500).json({ error: err instanceof Error ? err.message : 'ai failed' })
+    // Upstream keys may be rejected; client falls back to local craft.
+    return res.status(200).json({
+      mode: 'unavailable',
+      reason: 'upstream_rejected',
+      error: err instanceof Error ? err.message : 'ai failed',
+    })
   }
 }

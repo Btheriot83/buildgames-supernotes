@@ -19,16 +19,16 @@ export function ShellChrome() {
             <span className="t-number-pop-in" key={count} data-state="in">
               {count}
             </span>{' '}
-            linked cards · local desk
+            cards on the desk
           </p>
         </div>
       </div>
       <div className="chrome-actions">
         <button type="button" className="btn ghost" onClick={() => void resetSample()}>
-          Sample
+          Sample deck
         </button>
         <button type="button" className="btn ghost" onClick={() => void exportZip()}>
-          Export .md
+          Export Markdown
         </button>
         <button type="button" className="btn solid" onClick={createNote}>
           New card

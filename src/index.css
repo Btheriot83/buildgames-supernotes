@@ -504,3 +504,77 @@ button { cursor: pointer; }
   transform: translateX(0); opacity: 1; filter: none; pointer-events: auto;
 }
 .editor-scrim.t-modal, .editor-scrim.t-modal.is-open { transform: none; }
+
+/* Technique 5 — ink path draw when link suggestions land */
+.link-draw {
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  color: var(--coral);
+  transition: height 220ms ease, opacity 220ms ease;
+}
+.link-draw.is-on {
+  height: 48px;
+  opacity: 1;
+}
+.link-draw-svg { width: 100%; height: 48px; display: block; }
+.link-draw-path {
+  stroke-dasharray: 420;
+  stroke-dashoffset: 420;
+}
+.link-draw.is-on .link-draw-path {
+  animation: ink-draw 900ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+.link-draw-dot {
+  opacity: 0;
+  transform-origin: center;
+}
+.link-draw.is-on .link-draw-dot.a { animation: ink-dot 280ms ease 80ms forwards; }
+.link-draw.is-on .link-draw-dot.b { animation: ink-dot 280ms ease 720ms forwards; }
+@keyframes ink-draw {
+  to { stroke-dashoffset: 0; }
+}
+@keyframes ink-dot {
+  from { opacity: 0; transform: scale(0.4); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.empty-media {
+  position: relative;
+  width: min(420px, 100%);
+  margin: 0 auto 1rem;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  aspect-ratio: 16 / 9;
+  background: var(--paper-2);
+}
+.empty-video, .empty-fallback {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.empty-video { z-index: 1; }
+.empty-fallback { z-index: 0; }
+.empty-state img { /* legacy */ margin: 0; border: 0; }
+
+.loading-label {
+  /* Tech 7: drop shimmer-as-brand tell */
+  animation: none !important;
+  background: none !important;
+  color: var(--mute);
+  -webkit-text-fill-color: unset;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .link-draw.is-on .link-draw-path,
+  .link-draw.is-on .link-draw-dot {
+    animation: none !important;
+  }
+  .link-draw.is-on .link-draw-path { stroke-dashoffset: 0; }
+  .link-draw.is-on .link-draw-dot { opacity: 1; }
+  .empty-video { display: none; }
+}
