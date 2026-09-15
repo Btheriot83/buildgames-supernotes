@@ -3,6 +3,7 @@ import { CardGrid } from './components/CardGrid'
 import { EditorPanel } from './components/EditorPanel'
 import { InkBg } from './components/InkBg'
 import { LoadingShell } from './components/LoadingShell'
+import { OnboardingWalkthrough } from './components/OnboardingWalkthrough'
 import { SearchBar } from './components/SearchBar'
 import { ShellChrome } from './components/ShellChrome'
 import { Sidebar } from './components/Sidebar'
@@ -48,6 +49,7 @@ export default function App() {
         </div>
       )}
       <EditorPanel />
+      {ready && <OnboardingWalkthrough />}
       <Toast />
       <SuccessOverlay />
     </div>
