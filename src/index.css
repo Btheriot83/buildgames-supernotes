@@ -46,9 +46,9 @@ body {
   background: var(--paper);
   color: var(--ink);
   -webkit-font-smoothing: antialiased;
-  letter-spacing: -0.014em;
-  font-size: 15.5px;
-  line-height: 1.45;
+  letter-spacing: -0.011em;
+  font-size: 15.75px;
+  line-height: 1.48;
 }
 
 button, input, textarea, select {
@@ -160,11 +160,11 @@ button { cursor: pointer; }
   color: var(--ink);
 }
 .brand-sub {
-  margin: 0.18rem 0 0;
-  color: var(--mute);
-  font-size: 0.84rem;
-  font-weight: 500;
-  letter-spacing: -0.016em;
+  margin: 0.22rem 0 0;
+  color: var(--mute-soft);
+  font-size: 0.8rem;
+  font-weight: 450;
+  letter-spacing: -0.012em;
 }
 .chrome-actions { display: flex; gap: 0.35rem 0.65rem; flex-wrap: wrap; align-items: center; }
 .brand-block { display: grid; gap: 0.55rem; min-width: min(100%, 28rem); }
@@ -222,19 +222,19 @@ button { cursor: pointer; }
 }
 .btn.solid:hover { background: var(--coral-deep); border-color: var(--coral-deep); }
 .btn.export {
-  background: #fff;
-  color: var(--coral-deep);
-  border: 1.5px solid var(--coral);
+  background: transparent;
+  color: var(--ink-soft);
+  border: 1px solid var(--line-strong);
   border-radius: 999px;
-  font-weight: 700;
-  letter-spacing: -0.026em;
+  font-weight: 600;
+  letter-spacing: -0.02em;
   box-shadow: none;
-  padding: 0.64rem 1.2rem;
+  padding: 0.58rem 1.1rem;
 }
 .btn.export:hover {
-  background: rgba(217, 74, 92, 0.08);
-  border-color: var(--coral-deep);
-  color: var(--coral-deep);
+  background: rgba(43, 42, 45, 0.04);
+  border-color: var(--ink);
+  color: var(--ink);
 }
 .btn.ghost {
   background: transparent;
@@ -482,9 +482,9 @@ button { cursor: pointer; }
   inset: 0;
   z-index: 0;
   pointer-events: none;
-  opacity: 0.22;
+  opacity: 0.14;
   background-image:
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='28'%3E%3Cline x1='0' y1='27' x2='100' y2='27' stroke='%232b2a2d' stroke-width='0.75'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='28'%3E%3Cline x1='0' y1='27' x2='100' y2='27' stroke='%232b2a2d' stroke-width='0.6'/%3E%3C/svg%3E"),
     url('/art/card-stock.png');
   background-size: 100% 28px, 200px 200px;
   background-position: 0 52px, 0 0;

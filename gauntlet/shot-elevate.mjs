@@ -17,7 +17,7 @@ try {
   await page.waitForTimeout(1400)
   if (/127\.0\.0\.1|localhost|buildgames-supernotes/.test(url)) {
     try {
-      const btn = page.getByRole('button', { name: /Restore desk/i })
+      const btn = page.getByRole('button', { name: /Reset press|Restore desk/i })
       if (await btn.isVisible({ timeout: 2500 })) {
         await btn.click()
         await page.waitForTimeout(600)
