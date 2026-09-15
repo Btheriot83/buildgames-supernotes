@@ -84,14 +84,14 @@
   ],
   "doNotMessageBrandon": true,
   "branch": "beat-original-card-stock",
-  "finishedAtUtc": "2026-09-15T07:38:43Z",
-  "finishedAtPt": "2026-09-15 12:38 AM PT",
+  "finishedAtUtc": "2026-09-15T07:40:22Z",
+  "finishedAtPt": "2026-09-15 12:40 AM PT",
   "pr_url": "https://github.com/Btheriot83/buildgames-supernotes/pull/8",
   "pr_merged": true,
-  "vercel_deployment": "dpl_77XmjziuH3cSUo6ktTvFeLkUGbbQ",
+  "vercel_deployment": "dpl_A18YAXyZZad5DPVAgWEUJc9ox2zu",
   "live_smoke": {
     "ok": true,
-    "at_pt": "2026-09-15 12:39 AM PT",
+    "at_pt": "2026-09-15 12:40 AM PT",
     "http": 200,
     "shot": "gauntlet/shots-beat/beat18-live-prod-smoke.png",
     "checks": [
@@ -100,8 +100,9 @@
       "job strip Linked cards",
       "Find a card or [[link]]",
       "0 decorative gradients",
-      "18 beat commits; stopped early win vs bar"
+      "18 beat commits; stopped early win vs bar",
+      "PR #8 merged; prod redeployed"
     ]
   },
-  "mainSha": "ed91c46"
+  "mainSha": "7a0a3d6"
 }
