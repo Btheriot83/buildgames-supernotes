@@ -122,7 +122,7 @@ export function EditorPanel() {
             <div className="editor-head">
               <button
                 type="button"
-                className="btn ghost"
+                className="btn text"
                 onClick={() => {
                   closeEditor()
                   resetAi()
@@ -200,7 +200,7 @@ export function EditorPanel() {
               <div className="ai-actions">
                 <button
                   type="button"
-                  className="btn tiny"
+                  className="btn tiny quiet"
                   disabled={busy !== null}
                   onClick={() => void runAutotag()}
                 >
@@ -208,7 +208,7 @@ export function EditorPanel() {
                 </button>
                 <button
                   type="button"
-                  className="btn tiny"
+                  className="btn tiny quiet"
                   disabled={busy !== null}
                   onClick={() => void runSummarize()}
                 >
