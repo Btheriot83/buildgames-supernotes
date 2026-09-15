@@ -184,17 +184,17 @@ export function EditorPanel() {
               className="editor-body"
               value={note.body}
               onChange={(e) => updateNote(note.id, { body: e.target.value })}
-              placeholder="One thought. Pencil [[Another card]]."
+              placeholder="Write on the stock. Pencil [[Another card]]."
               spellCheck
             />
             <p className="editor-hint">
-              Pencil <code>[[Card title]]</code> · Tag / Tighten / Find links · Export Markdown from the header
+              Pencil <code>[[Card title]]</code>. Tags come from the text. Export Markdown when you leave.
             </p>
 
             <section className="ai-assist" aria-label="AI card assist">
-              <h3>Press this card</h3>
+              <h3>On the press</h3>
               <p className="ai-meta">
-                Stamp tags. Tighten the line. Find cards this one should touch.
+                Tag · Tighten · Find links
               </p>
               <LinkDraw active={Boolean(linkResult && linkResult.links.length)} />
               <div className="ai-actions">
@@ -243,7 +243,7 @@ export function EditorPanel() {
                   <strong>Nearby cards</strong>
                   {linkResult.links.length === 0 ? (
                     <p className="muted" style={{ margin: '0.35rem 0 0' }}>
-                      Quiet desk — write a little more, or add another card.
+                      Quiet press — write a little more, or cut another card.
                     </p>
                   ) : (
                     <ul>
