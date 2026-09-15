@@ -60,7 +60,7 @@
     "r9: contrast \u2014 tag chips + active collection weight",
     "r10: bar gap \u2014 body density + final A/B vs bar and dream"
   ],
-  "shotCount": 19,
+  "shotCount": 20,
   "barShotRounds": [
     5,
     10
@@ -103,23 +103,24 @@
   },
   "doNotMessageBrandon": true,
   "branch": "phase-r5-anshu-integrity",
-  "finishedAtUtc": "2026-09-15T06:52:57Z",
-  "finishedAtPt": "2026-09-14 11:52 PM PT",
+  "finishedAtUtc": "2026-09-15T06:54:03Z",
+  "finishedAtPt": "2026-09-14 11:54 PM PT",
   "pr_url": "https://github.com/Btheriot83/buildgames-supernotes/pull/6",
-  "pr_merged": false,
-  "vercel_deployment": "dpl_Hvg8eT3W4aBdeUFAb8roPQZmnGny",
+  "pr_merged": true,
+  "vercel_deployment": "dpl_3hBN1YwymfqeNbCN2gQmExry42Xs",
   "live_smoke": {
     "ok": true,
-    "at_pt": "2026-09-14 11:52 PM PT",
+    "at_pt": "2026-09-14 11:54 PM PT",
     "http": 200,
-    "shot": "gauntlet/shots-r5/r10-live-smoke.png",
+    "shot": "gauntlet/shots-r5/r10-live-prod-smoke.png",
     "checks": [
-      "HTTP 200 local + prod deploy",
+      "HTTP 200",
       "job strip Linked cards \u2192 Search \u2192 Export Markdown",
       "search diesel \u2192 4 of 8",
-      "Card Stock Press identity",
+      "Card Stock Press color tabs",
       "flat materials / 0 decorative gradients",
-      "10 separate rN commits on phase-r5-anshu-integrity"
+      "10 separate rN commits"
     ]
-  }
+  },
+  "mainSha": "23f1b84"
 }
