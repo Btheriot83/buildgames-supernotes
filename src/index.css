@@ -147,19 +147,19 @@ button { cursor: pointer; }
 .brand h1 {
   margin: 0;
   font-family: var(--font-display);
-  font-weight: 700;
+  font-weight: 650;
   font-optical-sizing: auto;
-  font-size: clamp(1.58rem, 2.45vw, 1.98rem);
-  letter-spacing: -0.048em;
-  line-height: 1.02;
+  font-size: clamp(1.72rem, 2.6vw, 2.12rem);
+  letter-spacing: -0.042em;
+  line-height: 1.0;
   color: var(--ink);
 }
 .brand-sub {
-  margin: 0.12rem 0 0;
-  color: var(--ink-soft);
-  font-size: 0.88rem;
-  font-weight: 600;
-  letter-spacing: -0.024em;
+  margin: 0.18rem 0 0;
+  color: var(--mute);
+  font-size: 0.84rem;
+  font-weight: 500;
+  letter-spacing: -0.016em;
 }
 .chrome-actions { display: flex; gap: 0.35rem 0.65rem; flex-wrap: wrap; align-items: center; }
 .brand-block { display: grid; gap: 0.55rem; min-width: min(100%, 28rem); }
@@ -473,16 +473,16 @@ button { cursor: pointer; }
   margin: 0;
   font-family: var(--font-display);
   font-optical-sizing: auto;
-  font-size: 1.12rem;
-  line-height: 1.15;
-  letter-spacing: -0.045em;
-  font-weight: 700;
+  font-size: 1.18rem;
+  line-height: 1.18;
+  letter-spacing: -0.038em;
+  font-weight: 650;
   color: var(--ink);
 }
 .note-card p {
-  margin: 0; flex: 1; font-size: 0.91rem; line-height: 1.42; color: var(--ink-soft);
-  letter-spacing: -0.018em;
-  font-weight: 450;
+  margin: 0; flex: 1; font-size: 0.9rem; line-height: 1.48; color: var(--mute);
+  letter-spacing: -0.012em;
+  font-weight: 400;
 }
 .card-top {
   display: flex; justify-content: space-between; gap: 0.5rem;
