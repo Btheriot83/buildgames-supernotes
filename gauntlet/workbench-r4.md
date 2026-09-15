@@ -96,3 +96,9 @@ Bar baseline: `gauntlet/shots-r4/bar-supernotes-home.png`
 - verdict: Active collection wash stronger like dream-target; bar sidebar still cooler grey.
 - commit: 5309413
 
+## r12 — buttons
+- files: src/index.css (.btn.text)
+- shot: gauntlet/shots-r4/r12-text-restore.png
+- verdict: Restore reads as Log-in-style tertiary; bar still quieter overall chrome.
+- commit: 04e4d95
+

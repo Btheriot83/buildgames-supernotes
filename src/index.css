@@ -233,12 +233,14 @@ button { cursor: pointer; }
 .btn.text {
   background: transparent;
   border-color: transparent;
-  color: var(--mute-soft);
+  color: var(--mute);
   font-weight: 500;
-  padding: 0.55rem 0.45rem;
+  padding: 0.55rem 0.35rem;
   box-shadow: none;
+  font-size: 0.92rem;
+  letter-spacing: -0.02em;
 }
-.btn.text:hover { color: var(--ink); background: transparent; }
+.btn.text:hover { color: var(--ink); background: transparent; text-decoration: underline; text-underline-offset: 3px; }
 .btn.danger { color: var(--coral-deep); }
 .btn.tiny {
   padding: 0.4rem 0.8rem;
