@@ -24,5 +24,6 @@ Brandon: works better / data better, but **gradients are AI slop** and the app s
 ## Proof
 - Before: `gauntlet/shots-r2/before-gradients-prod.png` (live wash visible)
 - After: `gauntlet/shots-r2/after-gradients-flat.png` (flat paper)
+- Live smoke: `gauntlet/shots-r2/after-gradients-live-prod.png`
 
 Demo: https://buildgames-supernotes.vercel.app
