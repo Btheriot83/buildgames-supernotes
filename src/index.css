@@ -731,9 +731,9 @@ button { cursor: pointer; }
 .desk-status-sep { opacity: 0.5; }
 
 .card-link-meta {
-  display: inline-flex; gap: 0.35rem; align-items: center;
-  font-family: var(--font-mono); font-size: 0.72rem; color: var(--coral-deep);
-  font-weight: 600;
+  display: inline-flex; gap: 0.2rem; align-items: center;
+  font-family: var(--font-mono); font-size: 0.74rem; color: var(--coral-deep);
+  font-weight: 700; letter-spacing: -0.03em;
 }
 .link-out, .link-in { letter-spacing: -0.02em; }
 .tag-chip.tiny.wiki-chip {

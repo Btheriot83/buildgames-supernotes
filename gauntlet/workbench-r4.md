@@ -64,3 +64,9 @@ Bar baseline: `gauntlet/shots-r4/bar-supernotes-home.png`
 - verdict: Titles calmer/larger toward dream-target; bar still uses proprietary Gelica on marketing.
 - commit: 469a7e9
 
+## r7 — contrast (dream close)
+- files: src/components/NoteCard.tsx, src/index.css (.card-link-meta)
+- shot: gauntlet/shots-r4/r7-link-meta.png
+- verdict: Link counts now N↔N like dream-target; bar product cards still cleaner empty chrome.
+- commit: 32e79d4
+
