@@ -210,7 +210,7 @@ export function EditorPanel() {
             <section className="ai-assist" aria-label="Desk tools">
               <h3 className="assist-heading">Desk tools</h3>
               <p className="ai-meta">
-                Tag · Tighten · Find links
+                Tag · Shorten · Find links
               </p>
               <LinkDraw active={Boolean(linkResult && linkResult.links.length)} />
               <div className="ai-actions">

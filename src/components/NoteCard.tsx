@@ -13,21 +13,10 @@ export function NoteCard({ note }: { note: Note }) {
   const ref = useRef<HTMLButtonElement>(null)
   const tabColor = col?.color ?? '#c48a3a'
 
-  const onMove = (e: MouseEvent) => {
-    const el = ref.current
-    if (!el) return
-    const r = el.getBoundingClientRect()
-    const x = (e.clientX - r.left) / r.width - 0.5
-    const y = (e.clientY - r.top) / r.height - 0.5
-    el.style.setProperty('--rx', `${(-y * 4).toFixed(2)}deg`)
-    el.style.setProperty('--ry', `${(x * 5).toFixed(2)}deg`)
+  const onMove = (_e: MouseEvent) => {
+    /* craft5: tilt cut — flat stock, Craft-calm overview */
   }
-  const onLeave = () => {
-    const el = ref.current
-    if (!el) return
-    el.style.setProperty('--rx', '0deg')
-    el.style.setProperty('--ry', '0deg')
-  }
+  const onLeave = () => {}
 
   return (
     <button

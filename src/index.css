@@ -1469,3 +1469,54 @@ button { cursor: pointer; }
   color: var(--mute);
   letter-spacing: -0.01em;
 }
+
+
+/* craft4: make-it-alive — writing focus on the stock */
+.editor-body:focus {
+  outline: none;
+  box-shadow: inset 3px 0 0 0 rgba(217, 74, 92, 0.45);
+  padding-left: 0.55rem;
+  margin-left: -0.55rem;
+  transition: box-shadow 160ms ease, padding-left 160ms ease;
+}
+.editor-title:focus {
+  outline: none;
+  border-bottom-color: rgba(43, 42, 45, 0.22);
+}
+.editor-panel[data-open="true"] .editor-title {
+  animation: press-title-in 320ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+@keyframes press-title-in {
+  from { opacity: 0.55; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .editor-panel[data-open="true"] .editor-title { animation: none; }
+  .editor-body:focus { transition: none; }
+}
+
+/* craft5: pencil underlines stay — slightly stronger graphite trail */
+.wiki-chip,
+.tag-chip.tiny.wiki-chip {
+  border-bottom: 1.75px solid rgba(185, 56, 74, 0.5) !important;
+  text-underline-offset: 2px;
+}
+.tag-chip.tiny.hashish {
+  border-bottom: 1px solid rgba(43, 42, 45, 0.18);
+  border-radius: 0;
+  padding-bottom: 0.05rem;
+}
+.editor-hint {
+  border-bottom: 1.75px solid rgba(185, 56, 74, 0.34);
+}
+
+/* craft5b: calmer Craft overview — less tilt theatre */
+.note-card {
+  transform: none;
+}
+.note-card:hover {
+  transform: translateY(-1px);
+}
+.t-tilt-card {
+  transform: none !important;
+}
