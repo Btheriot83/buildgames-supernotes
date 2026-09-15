@@ -9,8 +9,6 @@ export function CardGrid() {
   const createNote = useNotes((s) => s.createNote)
   const view = state.view
   const hasFilters = Boolean(state.query || state.activeCollectionId || state.activeTag)
-  const linkCount = state.notes.reduce((n, note) => n + extractWikiTitles(note.body).length, 0)
-
   if (notes.length === 0) {
     return (
       <div className="empty-state">
@@ -51,21 +49,6 @@ export function CardGrid() {
 
   return (
     <div className="desk-stack">
-      <div className="desk-status" aria-live="polite">
-        <strong>
-          {notes.length} card{notes.length === 1 ? '' : 's'}
-          {hasFilters ? ' shown' : ' on the desk'}
-        </strong>
-        <span className="desk-status-sep" aria-hidden>
-          ·
-        </span>
-        <span>{linkCount} wiki links</span>
-        <span className="desk-status-sep" aria-hidden>
-          ·
-        </span>
-        <span>Search → Export Markdown</span>
-      </div>
-
       {view === 'list' ? (
         <ul className="note-list t-texts-reveal" data-state="in">
           {notes.map((n) => {

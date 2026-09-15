@@ -34,7 +34,7 @@ export function NoteCard({ note }: { note: Note }) {
       ref={ref}
       type="button"
       className="note-card t-tilt-card"
-      style={{ background: note.color, ['--tab' as string]: tabColor }}
+      style={{ background: 'var(--paper-card)', ['--tab' as string]: tabColor }}
       onClick={() => openNote(note.id)}
       onMouseMove={onMove}
       onMouseLeave={onLeave}
@@ -57,19 +57,16 @@ export function NoteCard({ note }: { note: Note }) {
       <h3>{note.title}</h3>
       <p>{renderBodyPreview(note.body)}</p>
       <div className="card-tags">
-        {note.tags.slice(0, 3).map((t) => (
+        {note.tags.slice(0, 1).map((t) => (
           <span key={t} className="tag-chip tiny">
             {t}
           </span>
         ))}
-        {outbound.slice(0, 2).map((t) => (
+        {outbound.slice(0, 1).map((t) => (
           <span key={t} className="tag-chip tiny linkish wiki-chip">
             [[{t}]]
           </span>
         ))}
-        {outbound.length > 2 && (
-          <span className="tag-chip tiny linkish">+{outbound.length - 2}</span>
-        )}
       </div>
     </button>
   )

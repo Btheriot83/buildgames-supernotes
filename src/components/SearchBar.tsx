@@ -38,7 +38,7 @@ export function SearchBar() {
         className="search-input t-clear"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
-        placeholder="Search cards, [[links]], tags — /"
+        placeholder="Find a card or [[link]] — /"
         autoComplete="off"
       />
       <div className="search-meta">
@@ -47,7 +47,7 @@ export function SearchBar() {
             {matchCount} of {total}
           </span>
         ) : (
-          <span className="search-hint">press / to find</span>
+          <span className="search-hint">/ to find</span>
         )}
         {query && (
           <button type="button" className="clear-btn" onClick={clearQuery} aria-label="Clear search">
