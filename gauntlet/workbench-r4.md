@@ -127,3 +127,9 @@ Bar baseline: `gauntlet/shots-r4/bar-supernotes-home.png`
 - verdict: Primary CTA denser like bar Sign up; coral still identity not bar #ff6682.
 - commit: e66be9b
 
+## r17 — bar gap (dream close / flat materials)
+- files: src/index.css (.ink-grain)
+- shot: gauntlet/shots-r4/r17-paper-grain.png
+- verdict: Subtle paper grain closer to dream-target; still zero decorative color gradients; bar mint wash remains different identity.
+- commit: d4d3b3d
+
