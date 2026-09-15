@@ -1,0 +1,116 @@
+{
+  "slug": "supernotes",
+  "product": "Inkwell",
+  "phase": "ELEVATE_PRO_BARS",
+  "status": "elevate_complete_honest",
+  "demoUrl": "https://buildgames-supernotes.vercel.app",
+  "barUrls": [
+    "https://bear.app/",
+    "https://www.craft.do/"
+  ],
+  "cloneOriginal": "https://supernotes.app/",
+  "path": "/workspace/build-games/apps/supernotes",
+  "identityLocked": "Card Stock Press",
+  "identityReseeded": false,
+  "jobClarity": "Linked cards \u2192 Search \u2192 Export Markdown",
+  "jobUnder3s": true,
+  "flatMaterials": true,
+  "decorativeGradients": 0,
+  "catalog": {
+    "guide": "/workspace/build-games/narrow/DESIGN_CATALOG_GUIDE.md",
+    "promptsJson": "https://design-catalog-three.vercel.app/data/prompts.json",
+    "techniquesUsed": [
+      "specify-the-look",
+      "critic-subagents",
+      "cut-elements",
+      "remove-ai-tells",
+      "hand-rewrite-copy",
+      "make-it-alive",
+      "design-system-from-assets",
+      "thinking-before-prompt",
+      "give-real-context"
+    ]
+  },
+  "roundsCounted": 12,
+  "cap": 12,
+  "stoppedEarly": false,
+  "stopReason": "12/12 elevate loops complete; independent screenshot-only critic vs Bear/Craft says elevated (~7.5) but does not win overall vs pro product UIs",
+  "critic": {
+    "studioScore": 7.5,
+    "vsBear": 7.4,
+    "vsCraft": 7.6,
+    "winsVsBars": false,
+    "elevatedCraft": true,
+    "doc": "docs/CRITIC_ELEVATE.md",
+    "abShot": "gauntlet/shots-elevate/critic-ab-elevate12.png"
+  },
+  "stealApplied": [
+    "writing surface first (underline search, borderless editor body)",
+    "tags from content (#nest)",
+    "card overview air (Craft gallery)",
+    "calm type",
+    "cut leftover desk chrome"
+  ],
+  "roundShas": [
+    "03b50d7",
+    "23368e5",
+    "3660f3e",
+    "db1947e",
+    "e8ae4e1",
+    "c07d57b",
+    "2124754",
+    "6fb4f9c",
+    "09abe73",
+    "6391411",
+    "e031b1c",
+    "06a449d"
+  ],
+  "roundMessages": [
+    "elevate1: specify-the-look \u2014 writing surface first; quiet job strip + brand",
+    "elevate2: cut-elements \u2014 zero-chrome sidebar, underline search, flat New",
+    "elevate3: design-system-from-assets \u2014 space tokens + tighter desk rail",
+    "elevate4: bar gap Bear \u2014 nested #tags from content, not pill chrome",
+    "elevate5: bar gap Craft \u2014 card overview air, hairline cards, calmer titles",
+    "elevate6: remove-ai-tells \u2014 kill soft shadows on cards, list, editor, toast",
+    "elevate7: hand-rewrite-copy \u2014 quieter editor voice (Shell wired in 12)",
+    "elevate8: make-it-alive \u2014 editor as writing surface, not bordered box",
+    "elevate9: fonts \u2014 Bear-calm type scale, fainter rules, quieter Export",
+    "elevate10: cut \u2014 hairline list/backlinks, underline editor meta, Folders",
+    "elevate11: bar gap Bear \u2014 coral active rail on folders; quieter empty press",
+    "elevate12: hand-copy Cut a card/Reset press + critic A/B vs Bear/Craft"
+  ],
+  "honestNotes": [
+    "Identity stayed Card Stock Press \u2014 no reseed",
+    "Primary bars were Bear + Craft (not only supernotes.app)",
+    "Critic screenshots-only vs bars; stop rule outside critic prompt",
+    "Does NOT claim win over Bear or Craft product UIs \u2014 elevated to ~7.5",
+    "Zero decorative color gradients verified on prod smoke",
+    "Cloud Agents unavailable on plan \u2014 worked local checkout",
+    "Did not message Brandon"
+  ],
+  "doNotMessageBrandon": true,
+  "branch": "elevate-pro-bars-card-stock",
+  "finishedAtUtc": "2026-09-15T13:33:43Z",
+  "finishedAtPt": "2026-09-15 6:33 AM PT",
+  "pr_url": "https://github.com/Btheriot83/buildgames-supernotes/pull/9",
+  "pr_merged": true,
+  "vercel_deployment": "dpl_4xzrRiGyr6vAWi1rizE9WB36U2fq",
+  "vercel_status": "READY",
+  "live_smoke": {
+    "ok": true,
+    "at_pt": "2026-09-15 6:33 AM PT",
+    "http": 200,
+    "shot": "gauntlet/shots-elevate/elevate12-live-prod-smoke.png",
+    "checks": [
+      "HTTP 200",
+      "Cut a card",
+      "Reset press",
+      "Linked cards job strip",
+      "Folders + #tags",
+      "0 decorative gradients",
+      "12 elevate commits; PR #9 merged; prod READY"
+    ]
+  },
+  "mainSha": "dbeae92",
+  "shotCount": 18
+}
