@@ -43,7 +43,7 @@
     "r9: contrast \u2014 list stock corners + search edge + active collection",
     "r10: bar gap \u2014 body density + final A/B vs bar and dream"
   ],
-  "shotCount": 19,
+  "shotCount": 20,
   "barShotRounds": [
     5,
     10
@@ -89,7 +89,7 @@
   "pr_url": "https://github.com/Btheriot83/buildgames-supernotes/pull/7",
   "pr_merged": true,
   "vercel_deployment": "dpl_HWxJktsP9bZFPasyXzfm5YDfRc1f",
-  "mainSha": "c4548df",
+  "mainSha": "cd9a819",
   "live_smoke": {
     "ok": true,
     "at_pt": "2026-09-15 12:15 AM PT",
