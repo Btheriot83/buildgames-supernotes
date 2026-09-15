@@ -471,10 +471,10 @@ button { cursor: pointer; }
   margin: 0;
   font-family: var(--font-display);
   font-optical-sizing: auto;
-  font-size: 1.08rem;
-  line-height: 1.18;
-  letter-spacing: -0.04em;
-  font-weight: 650;
+  font-size: 1.12rem;
+  line-height: 1.15;
+  letter-spacing: -0.045em;
+  font-weight: 700;
   color: var(--ink);
 }
 .note-card p {
@@ -511,8 +511,9 @@ button { cursor: pointer; }
   display: grid; gap: 0.25rem; box-shadow: 0 4px 12px rgba(40, 30, 10, 0.03);
 }
 .list-row strong {
-  font-family: var(--font-display); font-weight: 600;
-  letter-spacing: -0.025em; color: var(--ink);
+  font-family: var(--font-display); font-weight: 700;
+  letter-spacing: -0.035em; color: var(--ink);
+  font-size: 1.02rem;
 }
 .list-row span { color: var(--mute); font-size: 0.88rem; letter-spacing: -0.01em; }
 
@@ -569,9 +570,9 @@ button { cursor: pointer; }
 .editor-title {
   width: 100%; border: 0; background: transparent;
   font-family: var(--font-display); font-optical-sizing: auto;
-  font-size: 1.5rem; font-weight: 500; letter-spacing: -0.04em;
-  outline: none; padding: 0.25rem 0; border-bottom: 1px solid var(--line); color: var(--ink);
-  line-height: 1.15;
+  font-size: 1.55rem; font-weight: 650; letter-spacing: -0.045em;
+  outline: none; padding: 0.25rem 0; border-bottom: 1.5px solid var(--line-strong); color: var(--ink);
+  line-height: 1.12;
 }
 .editor-meta { display: grid; gap: 0.55rem; }
 .editor-meta label {
