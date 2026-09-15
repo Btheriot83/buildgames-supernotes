@@ -531,8 +531,8 @@ button { cursor: pointer; }
 
 .note-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.45rem; }
 .list-row {
-  width: 100%; text-align: left; border: 1px solid var(--line-strong);
-  background: #fff; border-radius: 8px; padding: 0.85rem 1rem;
+  width: 100%; text-align: left; border: 0; border-bottom: 1px solid var(--line);
+  background: transparent; border-radius: 0; padding: 0.85rem 0.15rem;
   display: grid; gap: 0.25rem; box-shadow: none;
 }
 .list-row strong {
@@ -605,8 +605,8 @@ button { cursor: pointer; }
   letter-spacing: -0.01em; text-transform: none; color: var(--mute); font-weight: 600;
 }
 .editor-meta input, .editor-meta select {
-  border: 1px solid var(--line); background: #fff; border-radius: 10px;
-  padding: 0.55rem 0.65rem; text-transform: none; letter-spacing: normal;
+  border: 0; border-bottom: 1px solid var(--line); background: transparent; border-radius: 0;
+  padding: 0.45rem 0.1rem; text-transform: none; letter-spacing: normal;
   font-size: 0.95rem; color: var(--ink);
 }
 .editor-body {
@@ -667,8 +667,8 @@ button { cursor: pointer; }
 }
 .backlinks ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.35rem; }
 .backlinks button {
-  width: 100%; text-align: left; border: 1px solid var(--line);
-  background: #fff; border-radius: 10px; padding: 0.55rem 0.7rem;
+  width: 100%; text-align: left; border: 0; border-bottom: 1px solid var(--line);
+  background: transparent; border-radius: 0; padding: 0.5rem 0.1rem;
 }
 .backlinks button:hover { border-color: rgba(217, 74, 92, 0.35); }
 
@@ -818,8 +818,8 @@ button { cursor: pointer; }
 
 .card-link-meta {
   display: inline-flex; gap: 0.15rem; align-items: center;
-  font-family: var(--font-mono); font-size: 0.72rem; color: var(--mute);
-  font-weight: 600; letter-spacing: -0.028em;
+  font-family: var(--font-mono); font-size: 0.68rem; color: var(--mute-soft);
+  font-weight: 500; letter-spacing: -0.02em;
   padding: 0;
   background: transparent;
   border: 0;

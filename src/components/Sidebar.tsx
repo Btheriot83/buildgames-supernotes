@@ -39,7 +39,7 @@ export function Sidebar() {
 
       <section>
         <div className="side-head">
-          <h2>Collections</h2>
+          <h2>Folders</h2>
           <button
             type="button"
             className="side-add"
