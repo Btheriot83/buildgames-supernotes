@@ -126,10 +126,10 @@ button { cursor: pointer; }
 }
 .brand { display: flex; gap: 0.85rem; align-items: center; }
 .brand-mark {
-  width: 40px; height: 40px; border-radius: 8px;
+  width: 32px; height: 32px; border-radius: 6px;
   background: var(--paper-card) url('/art/brand-mark.png') center/cover no-repeat;
-  border: 1px solid var(--line);
-  box-shadow: 0 1px 0 rgba(43,42,45,0.04), 0 4px 10px rgba(40, 30, 10, 0.05);
+  border: 1px solid rgba(43, 42, 45, 0.12);
+  box-shadow: none;
   flex: 0 0 auto;
 }
 .brand-mark.fallback {
@@ -149,9 +149,9 @@ button { cursor: pointer; }
   font-family: var(--font-display);
   font-weight: 650;
   font-optical-sizing: auto;
-  font-size: clamp(1.72rem, 2.6vw, 2.12rem);
-  letter-spacing: -0.042em;
-  line-height: 1.0;
+  font-size: clamp(1.55rem, 2.3vw, 1.92rem);
+  letter-spacing: -0.036em;
+  line-height: 1.05;
   color: var(--ink);
 }
 .brand-sub {
@@ -164,25 +164,25 @@ button { cursor: pointer; }
 .chrome-actions { display: flex; gap: 0.35rem 0.65rem; flex-wrap: wrap; align-items: center; }
 .brand-block { display: grid; gap: 0.55rem; min-width: min(100%, 28rem); }
 .job-strip {
-  display: inline-flex; flex-wrap: wrap; align-items: center; gap: 0.15rem 0.4rem;
+  display: inline-flex; flex-wrap: wrap; align-items: center; gap: 0.15rem 0.35rem;
   padding: 0;
   background: transparent;
   border: 0;
   border-radius: 0;
   box-shadow: none;
-  font-family: var(--font-display);
-  font-size: 0.98rem;
-  font-weight: 600;
-  color: var(--coral-deep);
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--mute);
   width: fit-content;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.018em;
 }
 .job-step.is-core {
-  color: var(--coral-deep);
-  font-weight: 600;
-  letter-spacing: -0.028em;
+  color: var(--ink-soft);
+  font-weight: 550;
+  letter-spacing: -0.02em;
 }
-.job-arrow { color: var(--coral); font-weight: 600; opacity: 0.85; }
+.job-arrow { color: var(--mute-soft); font-weight: 500; opacity: 0.75; }
 
 
 /* B3 button ladder: solid primary > outline secondary > text tertiary (bar: Sign up vs Log in) */
