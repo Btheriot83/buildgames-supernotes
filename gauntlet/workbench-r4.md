@@ -139,3 +139,9 @@ Bar baseline: `gauntlet/shots-r4/bar-supernotes-home.png`
 - verdict: Denser Source Sans body; bar SN Pro still wins proprietary calm.
 - commit: 45afdff
 
+## r19 — contrast (dream close)
+- files: src/index.css (.tag-chip)
+- shot: gauntlet/shots-r4/r19-tag-chips.png
+- verdict: Tags hold on paper like dream-target; bar product tags still cooler/lighter.
+- commit: 7af7c3e
+
