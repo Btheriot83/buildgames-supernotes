@@ -108,3 +108,10 @@ Bar baseline: `gauntlet/shots-r4/bar-supernotes-home.png`
 - verdict: Status rail chrome removed like dream-target; bar marketing has no tool status rail.
 - commit: a9af777
 
+## r14 — fonts (dream close)
+- files: src/index.css (.editor-title)
+- shot: gauntlet/shots-r4/r14-editor-title.png
+- recipes: panel-slide/modal←editor open
+- verdict: Editor title calmer like dream-target wordmark; bar has no in-app editor frame here.
+- commit: 5b54ae6
+
