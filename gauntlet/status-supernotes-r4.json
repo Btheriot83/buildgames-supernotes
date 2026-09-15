@@ -104,6 +104,23 @@
   },
   "doNotMessageBrandon": true,
   "branch": "phase-b4-integrity-r4",
-  "finishedAtUtc": "2026-09-15T05:20:00Z",
-  "finishedAtPt": "2026-09-14 10:20 PM PT"
+  "finishedAtUtc": "2026-09-15T05:20:40Z",
+  "finishedAtPt": "2026-09-14 10:20 PM PT",
+  "pr_url": "https://github.com/Btheriot83/buildgames-supernotes/pull/5",
+  "pr_merged": true,
+  "mainSha": "ff1cbf4",
+  "vercel_deployment": "dpl_3ieL3S7N2dNeJ9JbTReCZ5oqcxVA",
+  "live_smoke": {
+    "ok": true,
+    "at_pt": "2026-09-14 10:20 PM PT",
+    "http": 200,
+    "shot": "gauntlet/shots-r4/r20-live-prod-smoke.png",
+    "checks": [
+      "HTTP 200",
+      "job strip Write\u2192Link\u2192Search\u2192Export Markdown",
+      "Index Drawer locked",
+      "flat materials / 0 decorative gradients",
+      "20 separate rN commits on phase-b4-integrity-r4"
+    ]
+  }
 }
