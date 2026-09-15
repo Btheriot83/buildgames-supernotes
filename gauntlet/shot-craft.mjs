@@ -39,6 +39,13 @@ try {
     await page.waitForTimeout(500)
   }
 
+  // dismiss toast so shots stay clean
+  try {
+    const toast = page.locator('.app-toast.is-open')
+    if (await toast.isVisible({ timeout: 400 })) await toast.click()
+  } catch {}
+  await page.waitForTimeout(200)
+
   const path = `${out}/${name}.png`
   await page.screenshot({ path, animations: 'disabled' })
   // mirror into repo gauntlet

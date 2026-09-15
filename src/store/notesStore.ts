@@ -128,7 +128,7 @@ export const useNotes = create<NotesState>((set, get) => ({
       editorOpen: true,
     }))
     void get().persist()
-    get().showToast('Card cut')
+    get().showToast('Cut.')
   },
 
   updateNote: (id, patch) => {
@@ -154,7 +154,7 @@ export const useNotes = create<NotesState>((set, get) => ({
       editorOpen: s.selectedId === id ? false : s.editorOpen,
     }))
     void get().persist()
-    get().showToast('Card deleted')
+    get().showToast('Deleted')
   },
 
   addCollection: (name) => {
@@ -182,7 +182,7 @@ export const useNotes = create<NotesState>((set, get) => ({
     }
     await exportMarkdownZip(notes, collections)
     set({ successFlash: true })
-    get().showToast('Markdown exported')
+    get().showToast('Zip ready')
     window.setTimeout(() => set({ successFlash: false }), 1600)
   },
 
@@ -198,7 +198,7 @@ export const useNotes = create<NotesState>((set, get) => ({
       activeCollectionId: null,
       activeTag: null,
     })
-    get().showToast('Press restored')
+    get().showToast('Sample desk back')
   },
 
   clearAll: async () => {
@@ -209,7 +209,7 @@ export const useNotes = create<NotesState>((set, get) => ({
       selectedId: null,
       editorOpen: false,
     })
-    get().showToast('Cleared local notes')
+    get().showToast('Desk cleared')
   },
 
   showToast: (message) => {

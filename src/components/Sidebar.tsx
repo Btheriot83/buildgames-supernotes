@@ -105,7 +105,7 @@ export function Sidebar() {
             <button
               key={t}
               type="button"
-              className={`tag-line${activeTag === t ? ' is-active' : ''}`}
+              className={`tag-line${activeTag === t ? ' is-active' : ''}${t.includes('-') ? ' is-nest' : ''}`}
               onClick={() => setTagFilter(activeTag === t ? null : t)}
             >
               <span className="tag-hash">#</span>

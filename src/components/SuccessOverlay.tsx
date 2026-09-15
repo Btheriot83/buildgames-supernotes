@@ -17,8 +17,8 @@ export function SuccessOverlay() {
           />
         </svg>
       </span>
-      <p>Markdown zip ready</p>
-      <span className="success-sub">One .md per card — tags + collection in frontmatter</span>
+      <p>Zip ready</p>
+      <span className="success-sub">One .md per card. Frontmatter keeps tags.</span>
     </div>
   )
 }

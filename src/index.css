@@ -1418,13 +1418,14 @@ button { cursor: pointer; }
   padding: 0.28rem 0.3rem;
 }
 
-/* craft5: nested tag hint — indent compound / secondary feel */
-.tag-nest .tag-line:nth-child(n + 4) {
-  padding-left: 0.85rem;
+/* craft7: nested tags — hyphenated tags read as children */
+.tag-nest .tag-line.is-nest {
+  padding-left: 1rem;
 }
-.tag-nest .tag-line:nth-child(n + 4) .tag-hash {
-  opacity: 0.75;
+.tag-nest .tag-line.is-nest .tag-hash {
+  opacity: 0.7;
 }
+
 
 @media (max-width: 720px) {
   .editor-meta {
@@ -1519,4 +1520,15 @@ button { cursor: pointer; }
 }
 .t-tilt-card {
   transform: none !important;
+}
+
+
+/* craft7: writing measure + nest polish */
+@media (min-width: 1100px) {
+  .editor-panel {
+    width: min(760px, 56vw);
+  }
+}
+.editor-body {
+  min-height: 360px;
 }
