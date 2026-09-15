@@ -1,36 +1,35 @@
-# DELIVER — Inkwell Card Stock Press (R5)
+# DELIVER — Inkwell Card Stock Press (Anshu builder-guide wave)
 
 ## Technique 6 — Cuts
 | Cut | Why |
 |---|---|
-| Soft Index Drawer identity | AI-adjacent stationery; lost punch vs Supernotes |
-| Soft coral `#e4576b` as only accent | Nudged to punched `#d94a5c` |
-| Soft 14px card radii | 8px stock corners |
-| Wiki chips-as-pills | Pencil underline trails |
-| Write→Link→Search→Export four-step chrome | Collapsed to Linked cards → Search → Export Markdown (job ≤3s) |
-| Decorative gradients / glass / glow | Brandon hard fail |
-| Graph / accounts / FAQ / fake stats | Out of scope |
+| Cold first-run dump | No friend; activation unclear → add ≤5 coach cards |
+| Soft empty “start a note” SaaS voice | Press-room: Empty press / Cut a card |
+| Decorative job chrome if it fights writing | Keep job strip as ≤3s clarity only; no pill wrappers |
+| Soft pill search (already cut in elevate) | Stay underline |
+| Soft shadows / glass / gradient washes | Brandon hard fail |
+| Feature-tour onboarding | Teach by doing toward activation only |
 
-## Technique 7 — AI-tell removal (ANTI_SLOP)
-1. Vibe purple — cleared (coral ~8°)
-2. Hero gradients / gradient text — cleared (flat only)
-3. Glassmorphism — cleared
-4. Colored glow — cleared
-5. Inter/Geist/Space Grotesk — cleared
-6. Fraunces-everywhere — cleared
-7–18. Cluster — cleared (app desk, no marketing FAQ/stats/emoji nav)
+## Technique 7 — AI-tell removal (kill-list)
+1. Vibe purple — clear (coral ~8°)
+2. Gradient chrome / gradient text — clear (flat only)
+3. Glassmorphism — clear
+4. Colored glow — clear
+5. Inter / Geist / Space Grotesk — clear (Literata + Source Sans 3)
+6. Emoji 3-card grids / fake stats / sparkle badges — clear
+7. Soft glowing orbs / CSS blob empties — clear (real desk art)
 
-## Technique 8 — Hand copy (before → after)
-| Surface | Before | After |
-|---|---|---|
-| Brand sub | `N linked notecards on the desk` | `N cards · linked · searchable · exportable` |
-| Job strip | `Write → Link → Search → Export Markdown` | `Linked cards → Search → Export Markdown` |
-| Loading | `Laying out the cards…` | `Cutting the stock…` |
-| Search placeholder | `Search linked cards…` | `Search cards, [[links]], tags — /` |
-| Search hint | `Find before you stack` | `press / to find` |
-| Empty | `Clear desk` / `Start a card` | `Empty press` / `Cut a card` |
-| Editor | `Sharpen this card` | `Press this card` |
-| Toast create/export | `Card created` / `Markdown zip downloaded` | `Card cut` / `Markdown exported` |
+## Technique 8 — Hand copy (visible strings)
+| Surface | After (locked) |
+|---|---|
+| Brand sub | `N cards on the press` |
+| Job strip | `Linked cards → Search → Export Markdown` |
+| Primary CTA | `Cut a card` |
+| Search placeholder | `Find a card or [[link]]` |
+| Search hint | `/ to find` |
+| Empty | `Empty press` / coach line below |
+| Onboarding | see `ONBOARDING.md` copy deck |
+| Toast create/export | `Card cut` / `Markdown exported` |
 
 ## Core loop (first visit)
-Restore desk → open card → **Find links** (graphite draw) → Search diesel → Export Markdown.
+Friend coach → open seeded card → pencil `[[…]]` or Find links → `/` search → Export Markdown → coach gone.

@@ -5,6 +5,7 @@
 **Prior:** Index Drawer (soft/AI-adjacent — discarded)  
 **Do not reseed again in Phase B gauntlet rounds.**  
 **R6:** integrity-only under Card Stock Press (no Anshu reseed).
+**Anshu builder-guide wave (2026-09-15):** friend walkthrough onboarding under locked identity — no aesthetic reseed.
 
 ## Feel
 Thick uncoated index cards under the thumb: faint ruled lines, left color tab, rubber-stamp collection marks. Linking is a graphite pencil trail between two cards — not a knowledge-graph product. The press is a desk tool: linked cards → search → export Markdown.
