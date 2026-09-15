@@ -83,3 +83,9 @@ Bar baseline: `gauntlet/shots-r4/bar-supernotes-home.png`
 - verdict: Four-up density closer to dream-target; bar laptop preview still airier.
 - commit: 949298f
 
+## r10 — fonts (+ bar A/B)
+- files: src/index.css (.brand-sub)
+- shot: gauntlet/shots-r4/r10-desk.png; A/B gauntlet/shots-r4/r10-ab.png
+- verdict: Subcopy tighter; bar SN Pro body still more proprietary calm than Source Sans 3.
+- commit: bb1b258
+
