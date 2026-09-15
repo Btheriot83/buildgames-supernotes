@@ -89,3 +89,10 @@ Bar baseline: `gauntlet/shots-r4/bar-supernotes-home.png`
 - verdict: Subcopy tighter; bar SN Pro body still more proprietary calm than Source Sans 3.
 - commit: bb1b258
 
+## r11 — contrast (dream close)
+- files: src/index.css (.side-item.is-active)
+- shot: gauntlet/shots-r4/r11-sidebar-active.png
+- recipes: tabs-sliding←Cards/List; panel-reveal←sidebar
+- verdict: Active collection wash stronger like dream-target; bar sidebar still cooler grey.
+- commit: 5309413
+

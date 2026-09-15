@@ -368,9 +368,10 @@ button { cursor: pointer; }
 }
 .side-item:hover { background: var(--paper); color: var(--ink); }
 .side-item.is-active {
-  background: rgba(228, 87, 107, 0.1);
+  background: rgba(228, 87, 107, 0.14);
   color: var(--ink);
-  font-weight: 600;
+  font-weight: 700;
+  letter-spacing: -0.02em;
 }
 .side-item .count {
   margin-left: auto; font-family: var(--font-mono); font-size: 0.75rem; opacity: 0.7;
