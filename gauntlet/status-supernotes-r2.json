@@ -1,0 +1,50 @@
+{
+  "slug": "supernotes",
+  "product": "Inkwell",
+  "phase": "B2",
+  "status": "gauntlet_r2_complete",
+  "demoUrl": "https://buildgames-supernotes.vercel.app",
+  "barUrl": "https://supernotes.app/",
+  "path": "/workspace/build-games/apps/supernotes",
+  "identityLocked": "Index Drawer",
+  "identityReseeded": false,
+  "jobClarity": "Write → Link → Search → Export Markdown",
+  "jobUnder3s": true,
+  "phaseA": {
+    "done": true,
+    "identityPath": "docs/IDENTITY.md"
+  },
+  "phaseB": {
+    "roundsCompleted": 5,
+    "workbench": "gauntlet/workbench.md"
+  },
+  "phaseB2": {
+    "roundsCompleted": 10,
+    "roundsTarget": 10,
+    "workbench": "gauntlet/workbench-r2.md",
+    "visibleDelta": "gauntlet/VISIBLE_DELTA.md",
+    "shots": "gauntlet/shots-r2/",
+    "focus": [
+      "fix_visible_mistakes",
+      "job_clarity_under_3s",
+      "real_notes_not_SAMPLE",
+      "visibility_gate"
+    ],
+    "identityReseeded": false,
+    "finalCriticApprox": 9.3,
+    "note": "Index Drawer kept. SAMPLE deck replaced with real AZ field/desk notes. Job strip + search counts + wiki chips + Export Markdown prominence."
+  },
+  "live_smoke": {
+    "ok": true,
+    "at_pt": "pending_redeploy",
+    "checks": [
+      "no SAMPLE badges",
+      "job strip Write→Link→Search→Export",
+      "search diesel → 4 of 8",
+      "wiki chips + backlink meta",
+      "Export Markdown zip + success overlay"
+    ]
+  },
+  "doNotMessageBrandon": true,
+  "branch": "phase-b2-gauntlet-r2"
+}

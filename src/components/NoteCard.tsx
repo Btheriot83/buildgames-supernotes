@@ -1,12 +1,15 @@
 import { useRef, type MouseEvent } from 'react'
 import type { Note } from '../lib/types'
-import { extractWikiTitles, renderBodyPreview } from '../lib/links'
+import { backlinks, extractWikiTitles, renderBodyPreview } from '../lib/links'
 import { useNotes } from '../store/notesStore'
 
 export function NoteCard({ note }: { note: Note }) {
   const openNote = useNotes((s) => s.openNote)
+  const notes = useNotes((s) => s.notes)
   const collections = useNotes((s) => s.collections)
   const col = collections.find((c) => c.id === note.collectionId)
+  const outbound = extractWikiTitles(note.body)
+  const inbound = backlinks(note, notes).length
   const ref = useRef<HTMLButtonElement>(null)
 
   const onMove = (e: MouseEvent) => {
@@ -36,26 +39,34 @@ export function NoteCard({ note }: { note: Note }) {
       onMouseLeave={onLeave}
     >
       <div className="card-top">
-        {note.sample && <span className="sample-badge">SAMPLE</span>}
         {col && (
           <span className="card-col">
             <span className="dot" style={{ background: col.color }} />
             {col.name}
           </span>
         )}
+        {(outbound.length > 0 || inbound > 0) && (
+          <span className="card-link-meta" title="Outgoing wiki links / backlinks">
+            {outbound.length > 0 && <span className="link-out">{outbound.length}→</span>}
+            {inbound > 0 && <span className="link-in">←{inbound}</span>}
+          </span>
+        )}
       </div>
       <h3>{note.title}</h3>
       <p>{renderBodyPreview(note.body)}</p>
       <div className="card-tags">
-        {note.tags.slice(0, 4).map((t) => (
+        {note.tags.slice(0, 3).map((t) => (
           <span key={t} className="tag-chip tiny">
             {t}
           </span>
         ))}
-        {extractWikiTitles(note.body).length > 0 && (
-          <span className="tag-chip tiny linkish">
-            {extractWikiTitles(note.body).length} links
+        {outbound.slice(0, 2).map((t) => (
+          <span key={t} className="tag-chip tiny linkish wiki-chip">
+            [[{t}]]
           </span>
+        ))}
+        {outbound.length > 2 && (
+          <span className="tag-chip tiny linkish">+{outbound.length - 2}</span>
         )}
       </div>
     </button>

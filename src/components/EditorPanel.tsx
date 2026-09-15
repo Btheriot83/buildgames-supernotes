@@ -187,6 +187,9 @@ export function EditorPanel() {
               placeholder="One idea. Link with [[Another card]]."
               spellCheck
             />
+            <p className="editor-hint">
+              Link with <code>[[Card title]]</code> · Tag / Tighten / Find links below · Export Markdown from the header
+            </p>
 
             <section className="ai-assist" aria-label="AI card assist">
               <h3>Sharpen this card</h3>
@@ -272,7 +275,6 @@ export function EditorPanel() {
                   {links.map((l) => (
                     <li key={l.id}>
                       <button type="button" onClick={() => openNote(l.id)}>
-                        {l.sample && <span className="sample-badge inline">SAMPLE</span>}
                         {l.title}
                       </button>
                     </li>

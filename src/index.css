@@ -153,7 +153,36 @@ button { cursor: pointer; }
   color: var(--mute);
   font-size: 0.92rem;
 }
-.chrome-actions { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+.chrome-actions { display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center; }
+.brand-block { display: grid; gap: 0.55rem; min-width: min(100%, 28rem); }
+.job-strip {
+  display: inline-flex; flex-wrap: wrap; align-items: center; gap: 0.35rem 0.45rem;
+  padding: 0.35rem 0.65rem;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  box-shadow: 0 4px 14px rgba(40, 30, 10, 0.04);
+  font-size: 0.82rem;
+  color: var(--mute);
+  width: fit-content;
+}
+.job-step.is-core {
+  color: var(--ink);
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+.job-arrow { color: var(--coral); font-weight: 700; opacity: 0.85; }
+.btn.export {
+  background: #fff;
+  color: var(--coral-deep);
+  border-color: rgba(228, 87, 107, 0.45);
+  font-weight: 600;
+}
+.btn.export:hover {
+  background: rgba(228, 87, 107, 0.08);
+  border-color: var(--coral);
+}
+
 
 .btn {
   border: 1px solid var(--line-strong);
@@ -178,25 +207,38 @@ button { cursor: pointer; }
 .btn.tiny { padding: 0.3rem 0.65rem; font-size: 0.85rem; }
 .btn:disabled { opacity: 0.55; cursor: wait; }
 
-.search-bar { position: relative; margin-bottom: 1rem; }
+.search-bar { position: relative; margin-bottom: 0.85rem; }
 .search-input {
   width: 100%;
   border: 1px solid var(--line);
   background: #fff;
   border-radius: 14px;
-  padding: 0.75rem 0.95rem;
-  padding-right: 5rem;
+  padding: 0.85rem 1rem;
+  padding-right: 9.5rem;
   outline: none;
   box-shadow: 0 6px 18px rgba(40, 30, 10, 0.04);
   transition: border-color 160ms ease, box-shadow 160ms ease;
+  font-size: 1rem;
 }
 .search-input:focus {
   border-color: rgba(228, 87, 107, 0.45);
   box-shadow: 0 0 0 3px rgba(228, 87, 107, 0.12);
 }
-.clear-btn {
-  position: absolute; right: 0.7rem; top: 50%;
+.search-meta {
+  position: absolute; right: 0.55rem; top: 50%;
   transform: translateY(-50%);
+  display: inline-flex; align-items: center; gap: 0.35rem;
+  pointer-events: none;
+}
+.search-meta .clear-btn { pointer-events: auto; }
+.search-hint, .search-count {
+  font-size: 0.78rem;
+  color: var(--mute);
+  font-family: var(--font-mono);
+  white-space: nowrap;
+}
+.search-count { color: var(--coral-deep); font-weight: 600; }
+.clear-btn {
   border: 0; background: transparent; color: var(--mute);
   padding: 0.35rem 0.55rem;
 }
@@ -583,3 +625,71 @@ button { cursor: pointer; }
   background: rgba(228, 87, 107, 0.1);
   color: var(--coral-deep);
 }
+
+.desk-stack { display: grid; gap: 0.75rem; }
+.desk-status {
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.35rem 0.45rem;
+  padding: 0.55rem 0.8rem;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  color: var(--mute);
+  font-size: 0.88rem;
+}
+.desk-status strong { color: var(--ink); font-weight: 600; }
+.desk-status-sep { opacity: 0.5; }
+
+.card-link-meta {
+  display: inline-flex; gap: 0.35rem; align-items: center;
+  font-family: var(--font-mono); font-size: 0.72rem; color: var(--coral-deep);
+  font-weight: 600;
+}
+.link-out, .link-in { letter-spacing: -0.02em; }
+.tag-chip.tiny.wiki-chip {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: var(--font-mono);
+  letter-spacing: -0.02em;
+}
+.list-links { display: flex; flex-wrap: wrap; gap: 0.25rem; margin-top: 0.2rem; }
+
+.editor-hint {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--mute);
+  line-height: 1.4;
+}
+.editor-hint code {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--coral-deep);
+  background: rgba(228, 87, 107, 0.08);
+  padding: 0.05rem 0.35rem;
+  border-radius: 6px;
+}
+
+.success-sub {
+  display: block;
+  color: var(--mute);
+  font-size: 0.85rem;
+  max-width: 28ch;
+  margin: 0 auto;
+}
+
+/* Hide legacy SAMPLE badge if any stale DOM */
+.sample-badge { display: none !important; }
+
+.note-card { min-height: 188px; }
+.note-card p { color: #2f2b25; }
+
+@media (max-width: 640px) {
+  .search-input { padding-right: 1rem; padding-bottom: 2.2rem; }
+  .search-meta {
+    left: 0.75rem; right: auto; top: auto; bottom: 0.45rem;
+    transform: none;
+  }
+  .job-strip { font-size: 0.75rem; }
+}
+

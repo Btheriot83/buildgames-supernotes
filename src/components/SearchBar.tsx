@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react'
-import { useNotes } from '../store/notesStore'
+import { filteredNotes, useNotes } from '../store/notesStore'
 
 export function SearchBar() {
   const query = useNotes((s) => s.query)
@@ -7,6 +7,9 @@ export function SearchBar() {
   const clearQuery = useNotes((s) => s.clearQuery)
   const shake = useNotes((s) => s.searchShake)
   const createNote = useNotes((s) => s.createNote)
+  const state = useNotes()
+  const matchCount = filteredNotes(state).length
+  const total = state.notes.length
   const ref = useRef<HTMLInputElement>(null)
 
   useEffect(() => {
@@ -35,14 +38,23 @@ export function SearchBar() {
         className="search-input t-clear"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
-        placeholder="Find a card — press /"
+        placeholder="Search linked cards — title, body, tags  ·  press /"
         autoComplete="off"
       />
-      {query && (
-        <button type="button" className="clear-btn" onClick={clearQuery} aria-label="Clear search">
-          Clear
-        </button>
-      )}
+      <div className="search-meta">
+        {query ? (
+          <span className="search-count" aria-live="polite">
+            {matchCount} of {total}
+          </span>
+        ) : (
+          <span className="search-hint">Find before you stack</span>
+        )}
+        {query && (
+          <button type="button" className="clear-btn" onClick={clearQuery} aria-label="Clear search">
+            Clear
+          </button>
+        )}
+      </div>
     </div>
   )
 }

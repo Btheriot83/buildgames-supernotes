@@ -1,6 +1,6 @@
 import { filteredNotes, useNotes } from '../store/notesStore'
 import { NoteCard } from './NoteCard'
-import { renderBodyPreview } from '../lib/links'
+import { extractWikiTitles, renderBodyPreview } from '../lib/links'
 
 export function CardGrid() {
   const state = useNotes()
@@ -9,6 +9,7 @@ export function CardGrid() {
   const createNote = useNotes((s) => s.createNote)
   const view = state.view
   const hasFilters = Boolean(state.query || state.activeCollectionId || state.activeTag)
+  const linkCount = state.notes.reduce((n, note) => n + extractWikiTitles(note.body).length, 0)
 
   if (notes.length === 0) {
     return (
@@ -39,7 +40,7 @@ export function CardGrid() {
         <p>
           {hasFilters
             ? 'Loosen search or filters — or jot a fresh card.'
-            : 'One thought per card. Pencil a [[link]]. Let the desk suggest the rest.'}
+            : 'Write a card. Link it with [[Title]]. Search the desk. Export Markdown when you leave.'}
         </p>
         <button type="button" className="btn solid" onClick={createNote}>
           Start a card
@@ -48,29 +49,53 @@ export function CardGrid() {
     )
   }
 
-  if (view === 'list') {
-    return (
-      <ul className="note-list t-texts-reveal" data-state="in">
-        {notes.map((n) => (
-          <li key={n.id}>
-            <button type="button" className="list-row" onClick={() => openNote(n.id)}>
-              <strong>
-                {n.sample && <span className="sample-badge inline">SAMPLE</span>}
-                {n.title}
-              </strong>
-              <span>{renderBodyPreview(n.body, 90)}</span>
-            </button>
-          </li>
-        ))}
-      </ul>
-    )
-  }
-
   return (
-    <div className="card-grid t-texts-reveal" data-state="in">
-      {notes.map((n) => (
-        <NoteCard key={n.id} note={n} />
-      ))}
+    <div className="desk-stack">
+      <div className="desk-status" aria-live="polite">
+        <strong>
+          {notes.length} card{notes.length === 1 ? '' : 's'}
+          {hasFilters ? ' shown' : ' on the desk'}
+        </strong>
+        <span className="desk-status-sep" aria-hidden>
+          ·
+        </span>
+        <span>{linkCount} wiki links</span>
+        <span className="desk-status-sep" aria-hidden>
+          ·
+        </span>
+        <span>Search above · Export Markdown in the header</span>
+      </div>
+
+      {view === 'list' ? (
+        <ul className="note-list t-texts-reveal" data-state="in">
+          {notes.map((n) => {
+            const links = extractWikiTitles(n.body)
+            return (
+              <li key={n.id}>
+                <button type="button" className="list-row" onClick={() => openNote(n.id)}>
+                  <strong>{n.title}</strong>
+                  <span>{renderBodyPreview(n.body, 90)}</span>
+                  {links.length > 0 && (
+                    <span className="list-links">
+                      {links.slice(0, 3).map((t) => (
+                        <span key={t} className="tag-chip tiny linkish wiki-chip">
+                          [[{t}]]
+                        </span>
+                      ))}
+                    </span>
+                  )}
+                </button>
+              </li>
+            )
+          })}
+        </ul>
+      ) : (
+        <div className="card-grid t-texts-reveal" data-state="in">
+          {notes.map((n) => (
+            <NoteCard key={n.id} note={n} />
+          ))}
+        </div>
+      )}
     </div>
   )
 }
