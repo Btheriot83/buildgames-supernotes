@@ -41,9 +41,9 @@ body {
   background: var(--paper);
   color: var(--ink);
   -webkit-font-smoothing: antialiased;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.014em;
   font-size: 15.5px;
-  line-height: 1.42;
+  line-height: 1.45;
 }
 
 button, input, textarea, select {
@@ -506,8 +506,8 @@ button { cursor: pointer; }
 }
 .card-col {
   display: inline-flex; align-items: center; gap: 0.3rem;
-  font-size: 0.72rem; text-transform: none; letter-spacing: -0.01em;
-  color: var(--mute); font-weight: 650;
+  font-size: 0.7rem; text-transform: none; letter-spacing: -0.008em;
+  color: var(--mute-soft); font-weight: 550;
 }
 .stamp-dot {
   width: 10px; height: 10px; border-radius: 2px;
