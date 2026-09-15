@@ -269,17 +269,17 @@ button { cursor: pointer; }
 .search-bar { position: relative; margin-bottom: 0.85rem; }
 .search-input {
   width: 100%;
-  border: 1px solid var(--line);
+  border: 1.5px solid var(--line-strong);
   background: #fff;
-  border-radius: 14px;
-  padding: 0.9rem 1.05rem;
+  border-radius: 12px;
+  padding: 0.85rem 1rem;
   padding-right: 9.5rem;
   outline: none;
   box-shadow: none;
   transition: border-color 140ms ease, box-shadow 140ms ease;
-  font-size: 1.02rem;
+  font-size: 1rem;
   font-weight: 500;
-  letter-spacing: -0.015em;
+  letter-spacing: -0.02em;
   color: var(--ink);
 }
 .search-input::placeholder {

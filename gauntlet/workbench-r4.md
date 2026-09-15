@@ -115,3 +115,9 @@ Bar baseline: `gauntlet/shots-r4/bar-supernotes-home.png`
 - verdict: Editor title calmer like dream-target wordmark; bar has no in-app editor frame here.
 - commit: 5b54ae6
 
+## r15 — contrast (+ bar A/B)
+- files: src/index.css (.search-input)
+- shot: gauntlet/shots-r4/r15-desk.png; A/B gauntlet/shots-r4/r15-ab.png
+- verdict: Search edge stronger toward dream-target; bar email field still softer marketing chrome.
+- commit: 906a75f
+
