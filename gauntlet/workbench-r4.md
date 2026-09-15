@@ -121,3 +121,9 @@ Bar baseline: `gauntlet/shots-r4/bar-supernotes-home.png`
 - verdict: Search edge stronger toward dream-target; bar email field still softer marketing chrome.
 - commit: 906a75f
 
+## r16 — buttons
+- files: src/index.css (.btn.solid)
+- shot: gauntlet/shots-r4/r16-solid-new.png
+- verdict: Primary CTA denser like bar Sign up; coral still identity not bar #ff6682.
+- commit: e66be9b
+

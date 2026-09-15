@@ -206,7 +206,9 @@ button { cursor: pointer; }
   background: var(--coral);
   color: #fff;
   border-color: var(--coral-border);
+  border-width: 1.5px;
   font-weight: 700;
+  letter-spacing: -0.03em;
   box-shadow: var(--btn-shadow);
 }
 .btn.solid:hover { background: var(--coral-deep); border-color: var(--coral-deep); }
