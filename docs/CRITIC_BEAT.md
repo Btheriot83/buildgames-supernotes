@@ -22,3 +22,17 @@
 **Wins overall craft vs supernotes.app?** **No** — bar marketing serenity still ahead; candidate closing as product desk.
 
 Stop rule (≥9 studio / win vs bar) lives with implementer — not in critic prompt.
+
+## Round beat17 — inputs
+- Candidate: `gauntlet/shots-beat/beat17-type-quiet.png`
+- Bar: `gauntlet/shots-beat/beat0-bar-supernotes.png`
+- A/B: `gauntlet/shots-beat/critic-ab-beat17.png`
+
+## Critic read (fresh, same prompt)
+**Aesthetic named:** Card Stock Press desk — white ruled stock, coral pill CTAs, Literata path, quiet collections.
+
+**Studio gaps remaining:** brand mark still a touch crude vs SN logo mark; ruled lines could be fainter; no device photography (N/A for desk).
+
+**Score vs studio Card Stock Press:** **8.5 / 10**
+
+**Wins overall craft vs supernotes.app?** **Yes.** Candidate’s working desk is more intentional: flat paper materials, zero decorative gradients (bar mint wash is chrome gradient), committed stock metaphor, quieter chrome after cuts. Bar still owns proprietary Gelica marketing serenity and product photography — those don’t outweigh candidate craft on the linked-card job surface.
