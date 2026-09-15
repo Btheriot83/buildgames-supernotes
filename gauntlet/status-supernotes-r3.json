@@ -55,12 +55,29 @@
     "note": "Index Drawer kept. 20 rounds on type hierarchy, ink contrast, and primary/secondary/tertiary button weight vs live supernotes.app. Zero decorative gradients."
   },
   "live_smoke": {
-    "ok": false,
-    "at_pt": "2026-09-14 9:38 PM PT",
-    "note": "pending redeploy"
+    "ok": true,
+    "at_pt": "2026-09-14 9:40 PM PT",
+    "http": 200,
+    "checks": [
+      "HTTP 200",
+      "SAMPLE count 0",
+      "job strip Write\u2192Link\u2192Search\u2192Export Markdown",
+      "Literata brand weight 600",
+      "New card solid 700 + coral border",
+      "Export outline secondary",
+      "Restore desk text tertiary",
+      "search diesel \u2192 4 of 8",
+      "8 cards on desk",
+      "flat materials (decorative gradients neutralized)"
+    ],
+    "shot": "gauntlet/shots-r3/r3-live-prod-smoke.png"
   },
   "doNotMessageBrandon": true,
   "branch": "phase-b3-gauntlet-r3",
-  "finishedAtUtc": "2026-09-15T04:38:57Z",
-  "finishedAtPt": "2026-09-14 9:38 PM PT"
+  "finishedAtUtc": "2026-09-15T04:40:02Z",
+  "finishedAtPt": "2026-09-14 9:40 PM PT",
+  "pr_url": "https://github.com/Btheriot83/buildgames-supernotes/pull/4",
+  "pr_merged": true,
+  "mainSha": "684989d",
+  "vercel_deployment": "dpl_8UwXKgKSPjvG3ZdVkJvgG86kYqcX"
 }
