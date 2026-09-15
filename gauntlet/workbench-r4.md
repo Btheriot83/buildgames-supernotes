@@ -45,3 +45,9 @@ Bar baseline: `gauntlet/shots-r4/bar-supernotes-home.png`
 - verdict: Body ink now matches bar near-black #2b2a2d; paper still warmer than bar mint wash marketing.
 - commit: 093373f
 
+## r4 — buttons
+- files: src/index.css (.btn, --btn-shadow)
+- shot: gauntlet/shots-r4/r4-buttons-chrome.png
+- verdict: New card / Export denser like bar Sign up; coral still identity #e4576b not bar #ff6682.
+- commit: 10f3a72
+

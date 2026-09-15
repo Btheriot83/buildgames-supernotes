@@ -19,7 +19,7 @@
   /* Flat paper lift — no decorative gradients */
   --card-shadow: 0 1px 0 rgba(255, 255, 255, 0.7) inset, 0 8px 18px rgba(40, 30, 10, 0.07);
   --card-shadow-hover: 0 1px 0 rgba(255, 255, 255, 0.75) inset, 0 12px 26px rgba(40, 30, 10, 0.1);
-  --btn-shadow: 0 3px 8px rgba(228, 87, 107, 0.18);
+  --btn-shadow: 0 4px 12px rgba(228, 87, 107, 0.22);
   --radius: 12px;
   --font-display: 'Literata', 'Iowan Old Style', Georgia, serif;
   --font-body: 'Source Sans 3', 'Source Sans Pro', system-ui, sans-serif;
@@ -188,13 +188,13 @@ button { cursor: pointer; }
   border: 1px solid var(--line-strong);
   background: #fff;
   color: var(--ink-soft);
-  border-radius: 14px;
-  padding: 0.55rem 1.05rem;
+  border-radius: 12px;
+  padding: 0.62rem 1.15rem;
   transition: background 140ms ease, border-color 140ms ease, transform 140ms ease, color 140ms ease, box-shadow 140ms ease;
   font-weight: 600;
-  font-size: 0.95rem;
-  letter-spacing: -0.02em;
-  line-height: 1.2;
+  font-size: 0.94rem;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
 }
 .btn:hover { background: var(--paper-2); }
 .btn:active { transform: translateY(1px); }
