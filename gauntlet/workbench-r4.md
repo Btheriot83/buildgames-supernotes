@@ -77,3 +77,9 @@ Bar baseline: `gauntlet/shots-r4/bar-supernotes-home.png`
 - verdict: Assist buttons clearer in editor; bar has no equivalent AI assist chrome.
 - commit: fc9c497
 
+## r9 — bar gap (dream close)
+- files: src/index.css (.card-grid)
+- shot: gauntlet/shots-r4/r9-card-density.png
+- verdict: Four-up density closer to dream-target; bar laptop preview still airier.
+- commit: 949298f
+
