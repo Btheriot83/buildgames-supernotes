@@ -17,7 +17,6 @@ function toMarkdown(note: Note, collections: Collection[]): string {
     `title: ${JSON.stringify(note.title)}`,
     `tags: [${note.tags.map((t) => JSON.stringify(t)).join(', ')}]`,
     col ? `collection: ${JSON.stringify(col.name)}` : null,
-    note.sample ? 'sample: true' : null,
     `updated: ${note.updatedAt}`,
     '---',
     '',

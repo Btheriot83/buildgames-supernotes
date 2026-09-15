@@ -1,7 +1,7 @@
 import { create } from 'zustand'
 import { nanoid } from 'nanoid'
 import { clearSnapshot, loadSnapshot, saveSnapshot } from '../lib/db'
-import { buildSample } from '../lib/sample'
+import { buildSample, DEMO_SEED_KEY, shouldReseedDemo } from '../lib/sample'
 import { exportMarkdownZip } from '../lib/export'
 import type { Collection, CollectionId, Note, NoteId, ViewMode } from '../lib/types'
 
@@ -65,7 +65,7 @@ export const useNotes = create<NotesState>((set, get) => ({
     set({ loadStatus: 'loading' })
     try {
       let snap = await loadSnapshot()
-      if (!snap || snap.notes.length === 0) {
+      if (!snap || snap.notes.length === 0 || shouldReseedDemo(snap)) {
         snap = buildSample()
         await saveSnapshot(snap)
       }
@@ -84,6 +84,7 @@ export const useNotes = create<NotesState>((set, get) => ({
     const { notes, collections } = get()
     await saveSnapshot({
       version: 1,
+      seedKey: DEMO_SEED_KEY,
       notes,
       collections,
       updatedAt: stamp(),
@@ -187,7 +188,7 @@ export const useNotes = create<NotesState>((set, get) => ({
       activeCollectionId: null,
       activeTag: null,
     })
-    get().showToast('Sample deck restored')
+    get().showToast('Demo desk restored')
   },
 
   clearAll: async () => {

@@ -25,7 +25,7 @@ npm run test:e2e
 
 - Browser **IndexedDB** database `inkwell-supernotes`.
 - **Export .md** downloads a zip folder of one `.md` file per card (YAML frontmatter).
-- **Sample** restores the labelled SAMPLE deck.
+- **Restore desk** reloads the real demo notecards (AZ field / wiki trails).
 
 ## Limits vs Supernotes
 

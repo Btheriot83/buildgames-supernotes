@@ -24,6 +24,8 @@ export interface Snapshot {
   notes: Note[]
   collections: Collection[]
   updatedAt: string
+  /** Demo deck identity — bump via DEMO_SEED_KEY to refresh SAMPLE-only desks */
+  seedKey?: string
 }
 
 export type ViewMode = 'cards' | 'list'
