@@ -58,3 +58,9 @@ Bar baseline: `gauntlet/shots-r4/bar-supernotes-home.png`
 - verdict: Job strip now coral text like target; bar marketing still wins serenity/space; tool density expected.
 - commit: f704927
 
+## r6 — fonts (dream close)
+- files: src/index.css (.note-card h3)
+- shot: gauntlet/shots-r4/r6-card-titles.png
+- verdict: Titles calmer/larger toward dream-target; bar still uses proprietary Gelica on marketing.
+- commit: 469a7e9
+
