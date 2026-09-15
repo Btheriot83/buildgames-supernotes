@@ -1,12 +1,28 @@
-# Visible delta — Inkwell Phase B2
+# Visible delta — Inkwell anti-gradient pass (2026-09-14)
 
-Pre: SAMPLE badges, ghost Export, no job strip, thin sample titles.
-Post (≤3s spottable):
+Brandon: works better / data better, but **gradients are AI slop** and the app still read as AI-made.
 
-1. **Job strip** Write → Link → Search → Export Markdown under the wordmark
-2. **Real notes** Verde River / Pump house / Casa Grande — zero SAMPLE labels
-3. **Wiki chips** `[[…]]` + `2→ ←1` on cards
-4. **Search** “4 of 8” match count when querying `diesel`
-5. **Export** coral-outline CTA + “Markdown zip ready” success overlay
+## Removed (chrome personality)
+1. **Body wash** `.ink-bg` mint/peach radial + vertical linear gradient → solid `--paper`
+2. **Skeleton shimmer** `.skel-line` sweeping `linear-gradient` band → flat `#e8e0d2` opacity pulse
+3. **Brand fallback wash** `.brand-mark.fallback` diagonal mint gradient → solid `#fff`
+4. **Card-tilt radial sheen** `.t-tilt-glare` multi-radial screen glare → disabled (`display:none`)
+5. **Shimmer-text recipe** decorative gradient `::before` inert for chrome safety
 
-Proof shots: `gauntlet/shots-r2/r2-desk-job-strip.png`, `r2-search-diesel.png`, `r2-export-success.png`, `r2-wiki-chips.png`, `r2-editor-links.png`
+## Kept
+- Functional hairlines / borders / focus rings
+- Solid card fills + real empty-state photo/video
+- Subtle paper drop shadows (not colored glow)
+
+## Audit (ANTI_SLOP instant-fail)
+- No vibe purple / indigo CTAs
+- No glass `backdrop-blur` chrome
+- No colored glow CTAs
+- No blob/mesh empty states (real media)
+- No Inter/Geist/Space Grotesk defaults (Literata + Source Sans 3)
+
+## Proof
+- Before: `gauntlet/shots-r2/before-gradients-prod.png` (live wash visible)
+- After: `gauntlet/shots-r2/after-gradients-flat.png` (flat paper)
+
+Demo: https://buildgames-supernotes.vercel.app

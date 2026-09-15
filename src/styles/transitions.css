@@ -713,24 +713,14 @@
 .t-tilt-card.is-tilting {
   transition: transform var(--tilt-follow) var(--tilt-follow-ease);
 }
-/* Cursor-tracked glare: layered soft circles that add like
-   light (screen blend) at the pointer position. */
+/* Glare disabled — radial sheen reads as AI chrome (Brandon 2026-09-14).
+   Tilt motion may remain; no decorative gradient wash on cards. */
 .t-tilt-glare {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  opacity: 0;
-  mix-blend-mode: screen;
-  background:
-    radial-gradient(circle 95px at var(--tilt-gx, 50%) var(--tilt-gy, 50%),
-      rgba(255,255,255,0.48), rgba(255,255,255,0.06) 52%, rgba(255,255,255,0) 84%),
-    radial-gradient(circle 200px at var(--tilt-gx, 50%) var(--tilt-gy, 50%),
-      rgba(255,255,255,0.22), rgba(255,255,255,0.04) 58%, rgba(255,255,255,0) 78%),
-    radial-gradient(circle 360px at var(--tilt-gx, 50%) var(--tilt-gy, 50%),
-      rgba(255,255,255,0.10), rgba(255,255,255,0) 88%);
-  transition: opacity var(--tilt-glare-fade) var(--tilt-glare-ease);
+  display: none !important;
+  background: none !important;
+  opacity: 0 !important;
 }
-.t-tilt.is-hover .t-tilt-glare { opacity: var(--tilt-glare-opacity); }
+.t-tilt.is-hover .t-tilt-glare { opacity: 0 !important; }
 
 @media (prefers-reduced-motion: reduce) {
   .t-tilt-card { transform: none !important; transition: none !important; }
@@ -791,4 +781,10 @@
 
 @media (prefers-reduced-motion: reduce) {
   .t-clear-glow { opacity: 0 !important; }
+}
+
+/* Anti-slop: never use shimmer-text gradient as app chrome personality */
+.t-shimmer::before {
+  background-image: none !important;
+  animation: none !important;
 }

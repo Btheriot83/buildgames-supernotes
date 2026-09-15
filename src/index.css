@@ -54,15 +54,12 @@ button { cursor: pointer; }
   isolation: isolate;
 }
 
-/* Soft mint wash — not vibe purple, not mesh blobs */
+/* Flat paper — no decorative chrome gradients (Brandon 2026-09-14) */
 .ink-bg {
   position: fixed;
   inset: 0;
   z-index: -1;
-  background:
-    radial-gradient(900px 520px at 8% -5%, rgba(231, 243, 238, 0.95), transparent 60%),
-    radial-gradient(700px 480px at 100% 0%, rgba(244, 228, 220, 0.55), transparent 55%),
-    linear-gradient(180deg, #fbf8f2 0%, var(--paper) 42%, #f3eee4 100%);
+  background: var(--paper);
 }
 .ink-wash { display: none; }
 .ink-grain {
@@ -88,15 +85,14 @@ button { cursor: pointer; }
 }
 .skel-line {
   height: 10px; border-radius: 6px; margin-bottom: 0.65rem;
-  background: linear-gradient(90deg, #e8e0d2, #f4efe6, #e8e0d2);
-  background-size: 200% 100%;
-  animation: skel 1.2s linear infinite;
+  background: #e8e0d2;
+  animation: skel 1.2s ease-in-out infinite;
 }
 .skel-title { height: 18px; width: 55%; }
 .skel-line.short { width: 40%; }
 @keyframes skel {
-  from { background-position: 100% 0; }
-  to { background-position: -100% 0; }
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.55; }
 }
 .loading-label {
   text-align: center; color: var(--mute); margin: 0;
@@ -127,9 +123,7 @@ button { cursor: pointer; }
   flex: 0 0 auto;
 }
 .brand-mark.fallback {
-  background:
-    linear-gradient(145deg, #fff 40%, var(--mint-wash)),
-    #fff;
+  background: #fff;
   position: relative;
 }
 .brand-mark.fallback::after {
