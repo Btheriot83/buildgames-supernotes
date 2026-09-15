@@ -591,10 +591,10 @@ button { cursor: pointer; }
 .editor-body::placeholder { color: var(--mute-soft); }
 
 .ai-assist {
-  border: 1px solid var(--line);
+  border: 1.5px solid var(--line-strong);
   background: #fff;
-  border-radius: 14px;
-  padding: 0.7rem 0.8rem;
+  border-radius: 8px;
+  padding: 0.75rem 0.85rem;
   display: grid;
   gap: 0.5rem;
 }
