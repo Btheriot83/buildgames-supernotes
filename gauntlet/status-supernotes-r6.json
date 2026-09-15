@@ -2,7 +2,7 @@
   "slug": "supernotes",
   "product": "Inkwell",
   "phase": "R6",
-  "status": "integrity_complete_pending_deploy",
+  "status": "integrity_complete",
   "demoUrl": "https://buildgames-supernotes.vercel.app",
   "barUrl": "https://supernotes.app/",
   "path": "/workspace/build-games/apps/supernotes",
@@ -83,5 +83,25 @@
     "LinkDraw-Tech5": "Find links \u2192 graphite path"
   },
   "doNotMessageBrandon": true,
-  "branch": "phase-r6-integrity"
+  "branch": "phase-r6-integrity",
+  "finishedAtUtc": "2026-09-15T07:15:45Z",
+  "finishedAtPt": "2026-09-15 12:15 AM PT",
+  "pr_url": "https://github.com/Btheriot83/buildgames-supernotes/pull/7",
+  "pr_merged": true,
+  "vercel_deployment": "dpl_HWxJktsP9bZFPasyXzfm5YDfRc1f",
+  "mainSha": "c4548df",
+  "live_smoke": {
+    "ok": true,
+    "at_pt": "2026-09-15 12:15 AM PT",
+    "http": 200,
+    "shot": "gauntlet/shots-r6/r10-live-prod-smoke.png",
+    "checks": [
+      "HTTP 200",
+      "job strip Linked cards \u2192 Search \u2192 Export Markdown",
+      "search diesel filter",
+      "Card Stock Press color tabs",
+      "flat materials / 0 decorative gradients",
+      "10 separate rN commits"
+    ]
+  }
 }
