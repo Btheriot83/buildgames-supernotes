@@ -36,14 +36,14 @@ export function CardGrid() {
             height={472}
           />
         </div>
-        <h3>{hasFilters ? 'No cards here' : 'Clear desk'}</h3>
+        <h3>{hasFilters ? 'No cards match' : 'Empty press'}</h3>
         <p>
           {hasFilters
-            ? 'Loosen search or filters — or jot a fresh card.'
-            : 'Write a card. Link it with [[Title]]. Search the desk. Export Markdown when you leave.'}
+            ? 'Clear search or pick another collection — or cut a fresh card.'
+            : 'Cut a card. Pencil a [[link]]. Search the press. Export Markdown when you leave.'}
         </p>
         <button type="button" className="btn solid" onClick={createNote}>
-          Start a card
+          Cut a card
         </button>
       </div>
     )
@@ -63,7 +63,7 @@ export function CardGrid() {
         <span className="desk-status-sep" aria-hidden>
           ·
         </span>
-        <span>Search above · Export Markdown in the header</span>
+        <span>Search → Export Markdown</span>
       </div>
 
       {view === 'list' ? (

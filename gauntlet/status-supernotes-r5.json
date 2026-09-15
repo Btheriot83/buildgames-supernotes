@@ -1,0 +1,125 @@
+{
+  "slug": "supernotes",
+  "product": "Inkwell",
+  "phase": "R5",
+  "status": "weak_anshu_plus_integrity_complete",
+  "demoUrl": "https://buildgames-supernotes.vercel.app",
+  "barUrl": "https://supernotes.app/",
+  "path": "/workspace/build-games/apps/supernotes",
+  "identityLocked": "Card Stock Press",
+  "identityReseeded": true,
+  "priorIdentity": "Index Drawer",
+  "jobClarity": "Linked cards \u2192 Search \u2192 Export Markdown",
+  "jobUnder3s": true,
+  "flatMaterials": true,
+  "decorativeGradients": 0,
+  "phaseA": {
+    "done": true,
+    "techniquesDone": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "identityPath": "docs/IDENTITY.md",
+    "lennyDiscoverPath": "docs/DISCOVER.md",
+    "lennyDefinePath": "docs/DEFINE.md",
+    "lennyDeliverPath": "docs/DELIVER.md",
+    "imagesGenerated": true,
+    "videoOrMotionPath": "src/components/LinkDraw.tsx + public/art/empty-desk-loop.mp4",
+    "criticFreshContext": true,
+    "copyHandRewritten": true,
+    "commit": "9e2b2ba"
+  },
+  "roundsCounted": 10,
+  "roundShas": [
+    "b3f9ba5",
+    "798b209",
+    "95ee3b3",
+    "04eb4d9",
+    "dc76ba3",
+    "2e1f7c2",
+    "05f85d0",
+    "9a691c8",
+    "be1dd03",
+    "d6999c3"
+  ],
+  "roundMessages": [
+    "r1: fonts \u2014 wordmark Literata 600 + stamp mark",
+    "r2: contrast \u2014 ink lines + search edge + stamp resize",
+    "r3: buttons \u2014 denser New card / Export ladder",
+    "r4: bar gap \u2014 job strip weight + stock sidebar corners",
+    "r5: fonts \u2014 denser card titles + bar A/B shot",
+    "r6: contrast \u2014 thicker color tabs + clearer rules",
+    "r7: buttons \u2014 Press this card assist frame + Find links",
+    "r8: bar gap \u2014 Export weight + tighter brand-sub",
+    "r9: contrast \u2014 tag chips + active collection weight",
+    "r10: bar gap \u2014 body density + final A/B vs bar and dream"
+  ],
+  "shotCount": 19,
+  "barShotRounds": [
+    5,
+    10
+  ],
+  "honestNotes": [
+    "Index Drawer reseeds to Card Stock Press (WEAK Anshu)",
+    "Ruled stock + left tabs + graphite [[links]] punch card craft",
+    "Export Markdown includes links frontmatter + _index.md",
+    "Bar marketing still wins proprietary Gelica/SN Pro serenity",
+    "Coral identity #d94a5c kept (not bar #ff6682)",
+    "Zero decorative color gradients in chrome",
+    "transitions.dev + Tech5 LinkDraw on real actions"
+  ],
+  "dreamLoop": {
+    "target": "apps/supernotes/.dream-loop/target.png",
+    "targetCopy": "gauntlet/shots-r5/dream-target.png",
+    "roundsUsedToClose": [
+      1,
+      4,
+      5,
+      6,
+      9,
+      10
+    ],
+    "blender": false
+  },
+  "transitionsMap": {
+    "success-check": "Export Markdown \u2192 successFlash",
+    "toast": "create/delete/restore/export/collection",
+    "error-state-shake": "zero-hit search + empty export/collection",
+    "skeleton-reveal": "LoadingShell dismiss",
+    "texts-reveal": "brand h1 + card grid",
+    "tabs-sliding": "Cards/List",
+    "number-pop-in": "card count + backlinks",
+    "panel-reveal": "sidebar",
+    "panel-slide/modal": "editor open/close",
+    "card-tilt": "note card hover",
+    "input-clear-dissolve": "search Clear",
+    "LinkDraw-Tech5": "Find links \u2192 graphite path"
+  },
+  "doNotMessageBrandon": true,
+  "branch": "phase-r5-anshu-integrity",
+  "finishedAtUtc": "2026-09-15T06:52:57Z",
+  "finishedAtPt": "2026-09-14 11:52 PM PT",
+  "pr_url": "https://github.com/Btheriot83/buildgames-supernotes/pull/6",
+  "pr_merged": false,
+  "vercel_deployment": "dpl_Hvg8eT3W4aBdeUFAb8roPQZmnGny",
+  "live_smoke": {
+    "ok": true,
+    "at_pt": "2026-09-14 11:52 PM PT",
+    "http": 200,
+    "shot": "gauntlet/shots-r5/r10-live-smoke.png",
+    "checks": [
+      "HTTP 200 local + prod deploy",
+      "job strip Linked cards \u2192 Search \u2192 Export Markdown",
+      "search diesel \u2192 4 of 8",
+      "Card Stock Press identity",
+      "flat materials / 0 decorative gradients",
+      "10 separate rN commits on phase-r5-anshu-integrity"
+    ]
+  }
+}

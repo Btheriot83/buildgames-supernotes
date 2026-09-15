@@ -1,6 +1,7 @@
 import JSZip from 'jszip'
 import { saveAs } from 'file-saver'
 import type { Collection, Note } from './types'
+import { extractWikiTitles } from './links'
 
 function slug(title: string): string {
   const s = title
@@ -12,13 +13,19 @@ function slug(title: string): string {
 
 function toMarkdown(note: Note, collections: Collection[]): string {
   const col = collections.find((c) => c.id === note.collectionId)
+  const links = extractWikiTitles(note.body)
   const fm = [
     '---',
     `title: ${JSON.stringify(note.title)}`,
     `tags: [${note.tags.map((t) => JSON.stringify(t)).join(', ')}]`,
     col ? `collection: ${JSON.stringify(col.name)}` : null,
+    links.length
+      ? `links: [${links.map((t) => JSON.stringify(t)).join(', ')}]`
+      : null,
     `updated: ${note.updatedAt}`,
     '---',
+    '',
+    `# ${note.title}`,
     '',
     note.body.trim(),
     '',
@@ -43,6 +50,20 @@ export async function exportMarkdownZip(
     if (n > 0) base = `${base}-${n}`
     folder.file(`${base}.md`, toMarkdown(note, collections))
   }
+  // Index of links for the job trail
+  const indexLines = [
+    '# Inkwell export',
+    '',
+    `Cards: ${notes.length}`,
+    '',
+    ...notes.map((n) => {
+      const links = extractWikiTitles(n.body)
+      const linkBit = links.length ? ` → ${links.map((t) => `[[${t}]]`).join(', ')}` : ''
+      return `- [[${n.title}]]${linkBit}`
+    }),
+    '',
+  ]
+  folder.file('_index.md', indexLines.join('\n'))
   const blob = await zip.generateAsync({ type: 'blob' })
   saveAs(blob, `inkwell-notes-${new Date().toISOString().slice(0, 10)}.zip`)
 }

@@ -20,16 +20,12 @@ export function ShellChrome() {
               <span className="t-number-pop-in" key={count} data-state="in">
                 {count}
               </span>{' '}
-              linked notecards on the desk
+              cards · linked · searchable · exportable
             </p>
           </div>
         </div>
         <nav className="job-strip" aria-label="What this desk does">
-          <span className="job-step is-core">Write</span>
-          <span className="job-arrow" aria-hidden>
-            →
-          </span>
-          <span className="job-step is-core">Link</span>
+          <span className="job-step is-core">Linked cards</span>
           <span className="job-arrow" aria-hidden>
             →
           </span>

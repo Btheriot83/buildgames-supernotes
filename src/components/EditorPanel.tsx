@@ -184,17 +184,17 @@ export function EditorPanel() {
               className="editor-body"
               value={note.body}
               onChange={(e) => updateNote(note.id, { body: e.target.value })}
-              placeholder="One idea. Link with [[Another card]]."
+              placeholder="One thought. Pencil [[Another card]]."
               spellCheck
             />
             <p className="editor-hint">
-              Link with <code>[[Card title]]</code> · Tag / Tighten / Find links below · Export Markdown from the header
+              Pencil <code>[[Card title]]</code> · Tag / Tighten / Find links · Export Markdown from the header
             </p>
 
             <section className="ai-assist" aria-label="AI card assist">
-              <h3>Sharpen this card</h3>
+              <h3>Press this card</h3>
               <p className="ai-meta">
-                Tag it. Tighten it. Find the cards it should touch.
+                Stamp tags. Tighten the line. Find cards this one should touch.
               </p>
               <LinkDraw active={Boolean(linkResult && linkResult.links.length)} />
               <div className="ai-actions">

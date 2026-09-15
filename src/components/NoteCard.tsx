@@ -11,6 +11,7 @@ export function NoteCard({ note }: { note: Note }) {
   const outbound = extractWikiTitles(note.body)
   const inbound = backlinks(note, notes).length
   const ref = useRef<HTMLButtonElement>(null)
+  const tabColor = col?.color ?? '#c48a3a'
 
   const onMove = (e: MouseEvent) => {
     const el = ref.current
@@ -18,8 +19,8 @@ export function NoteCard({ note }: { note: Note }) {
     const r = el.getBoundingClientRect()
     const x = (e.clientX - r.left) / r.width - 0.5
     const y = (e.clientY - r.top) / r.height - 0.5
-    el.style.setProperty('--rx', `${(-y * 6).toFixed(2)}deg`)
-    el.style.setProperty('--ry', `${(x * 8).toFixed(2)}deg`)
+    el.style.setProperty('--rx', `${(-y * 4).toFixed(2)}deg`)
+    el.style.setProperty('--ry', `${(x * 5).toFixed(2)}deg`)
   }
   const onLeave = () => {
     const el = ref.current
@@ -33,15 +34,17 @@ export function NoteCard({ note }: { note: Note }) {
       ref={ref}
       type="button"
       className="note-card t-tilt-card"
-      style={{ background: note.color }}
+      style={{ background: note.color, ['--tab' as string]: tabColor }}
       onClick={() => openNote(note.id)}
       onMouseMove={onMove}
       onMouseLeave={onLeave}
     >
+      <span className="card-tab" aria-hidden />
+      <span className="card-rules" aria-hidden />
       <div className="card-top">
         {col && (
           <span className="card-col">
-            <span className="dot" style={{ background: col.color }} />
+            <span className="dot stamp-dot" style={{ background: col.color }} />
             {col.name}
           </span>
         )}
