@@ -164,24 +164,24 @@ button { cursor: pointer; }
 .chrome-actions { display: flex; gap: 0.35rem 0.65rem; flex-wrap: wrap; align-items: center; }
 .brand-block { display: grid; gap: 0.55rem; min-width: min(100%, 28rem); }
 .job-strip {
-  display: inline-flex; flex-wrap: wrap; align-items: center; gap: 0.15rem 0.4rem;
-  padding: 0;
-  background: transparent;
-  border: 0;
-  border-radius: 0;
+  display: inline-flex; flex-wrap: wrap; align-items: center; gap: 0.2rem 0.45rem;
+  padding: 0.28rem 0.55rem 0.32rem;
+  background: rgba(217, 74, 92, 0.08);
+  border: 1px solid rgba(217, 74, 92, 0.28);
+  border-radius: 6px;
   box-shadow: none;
-  font-size: 0.88rem;
-  font-weight: 700;
+  font-size: 0.9rem;
+  font-weight: 750;
   color: var(--coral-deep);
   width: fit-content;
-  letter-spacing: -0.025em;
+  letter-spacing: -0.028em;
 }
 .job-step.is-core {
   color: var(--coral-deep);
-  font-weight: 600;
-  letter-spacing: -0.02em;
+  font-weight: 700;
+  letter-spacing: -0.024em;
 }
-.job-arrow { color: var(--coral); font-weight: 700; opacity: 1; }
+.job-arrow { color: var(--coral); font-weight: 800; opacity: 1; }
 
 
 /* B3 button ladder: solid primary > outline secondary > text tertiary (bar: Sign up vs Log in) */
@@ -774,15 +774,16 @@ button { cursor: pointer; }
 .desk-stack { display: grid; gap: 0.75rem; }
 .desk-status {
   display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.35rem 0.45rem;
-  padding: 0.4rem 0.15rem 0.55rem;
-  background: transparent;
-  border: 0;
-  border-radius: 0;
+  padding: 0.45rem 0.65rem 0.5rem;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
   color: var(--mute);
-  font-size: 0.86rem;
-  letter-spacing: -0.015em;
+  font-size: 0.88rem;
+  letter-spacing: -0.018em;
+  font-weight: 500;
 }
-.desk-status strong { color: var(--ink); font-weight: 700; letter-spacing: -0.02em; }
+.desk-status strong { color: var(--ink); font-weight: 750; letter-spacing: -0.024em; }
 .desk-status-sep { opacity: 0.5; }
 
 .card-link-meta {
