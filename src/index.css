@@ -163,24 +163,24 @@ button { cursor: pointer; }
 .chrome-actions { display: flex; gap: 0.35rem 0.65rem; flex-wrap: wrap; align-items: center; }
 .brand-block { display: grid; gap: 0.55rem; min-width: min(100%, 28rem); }
 .job-strip {
-  display: inline-flex; flex-wrap: wrap; align-items: center; gap: 0.3rem 0.4rem;
-  padding: 0.32rem 0.7rem;
-  background: var(--paper-card);
-  border: 1px solid var(--line);
-  border-radius: 999px;
+  display: inline-flex; flex-wrap: wrap; align-items: center; gap: 0.2rem 0.35rem;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
   box-shadow: none;
-  font-size: 0.8rem;
-  font-weight: 500;
-  color: var(--mute-soft);
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: var(--coral-deep);
   width: fit-content;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.02em;
 }
 .job-step.is-core {
-  color: var(--ink-soft);
+  color: var(--coral-deep);
   font-weight: 600;
-  letter-spacing: -0.015em;
+  letter-spacing: -0.02em;
 }
-.job-arrow { color: var(--coral); font-weight: 700; opacity: 0.9; }
+.job-arrow { color: var(--coral); font-weight: 700; opacity: 1; }
 
 
 /* B3 button ladder: solid primary > outline secondary > text tertiary (bar: Sign up vs Log in) */

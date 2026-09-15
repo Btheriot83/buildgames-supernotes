@@ -51,3 +51,10 @@ Bar baseline: `gauntlet/shots-r4/bar-supernotes-home.png`
 - verdict: New card / Export denser like bar Sign up; coral still identity #e4576b not bar #ff6682.
 - commit: 10f3a72
 
+## r5 — bar gap (+ bar A/B + dream-loop target locked)
+- files: src/index.css (.job-strip); .gitignore (.dream-loop); gauntlet/shots-r4/dream-target.png (copy of .dream-loop/target.png)
+- shot: gauntlet/shots-r4/r5-desk.png; bar A/B gauntlet/shots-r4/r5-ab.png
+- dream-target: refined Index Drawer desk (coral job text, denser cards, toast) — close live→target in later rounds while still vs bar
+- verdict: Job strip now coral text like target; bar marketing still wins serenity/space; tool density expected.
+- commit: f704927
+
