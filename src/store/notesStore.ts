@@ -91,7 +91,17 @@ export const useNotes = create<NotesState>((set, get) => ({
     })
   },
 
-  setQuery: (q) => set({ query: q, searchShake: false }),
+  setQuery: (q) => {
+    set({ query: q, searchShake: false })
+    // Real-action: shake search chrome when a non-empty query matches nothing
+    window.setTimeout(() => {
+      const s = get()
+      const qq = s.query.trim().toLowerCase()
+      if (!qq) return
+      const hits = filteredNotes(s).length
+      if (hits === 0) set({ searchShake: true })
+    }, 0)
+  },
   clearQuery: () => set({ query: '' }),
   setView: (v) => set({ view: v }),
   setCollectionFilter: (id) => set({ activeCollectionId: id, activeTag: null }),

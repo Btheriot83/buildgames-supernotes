@@ -47,8 +47,7 @@ export function NoteCard({ note }: { note: Note }) {
         )}
         {(outbound.length > 0 || inbound > 0) && (
           <span className="card-link-meta" title="Outgoing wiki links / backlinks">
-            {outbound.length > 0 && <span className="link-out">{outbound.length}→</span>}
-            {inbound > 0 && <span className="link-in">←{inbound}</span>}
+            {outbound.length}↔{inbound}
           </span>
         )}
       </div>

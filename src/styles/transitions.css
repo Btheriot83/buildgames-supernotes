@@ -93,7 +93,8 @@
     transform var(--toast-close) var(--toast-ease),
     filter var(--toast-close) var(--toast-ease);
 }
-.t-toast.is-open {
+.t-toast.is-open,
+.t-toast[data-open="true"] {
   opacity: 1;
   transform: translateY(0) scale(1);
   filter: blur(0);

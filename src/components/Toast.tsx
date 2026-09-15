@@ -7,6 +7,7 @@ export function Toast() {
   return (
     <div
       className={`app-toast t-toast${open ? ' is-open' : ''}`}
+      data-open={open ? 'true' : 'false'}
       role="status"
       onClick={dismiss}
     >
