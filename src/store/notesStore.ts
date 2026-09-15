@@ -41,7 +41,7 @@ interface NotesState {
   dismissToast: () => void
 }
 
-const CARD_COLORS = ['#f4efe6', '#eef6f2', '#f7f1e8', '#eef2f7', '#f3ebe3', '#f5f0e7']
+const CARD_COLORS = ['#fff8ef', '#f3f7f1', '#fff1ea', '#f1f4fa', '#f7efe3', '#f6f1e6', '#fdecef']
 
 function stamp(): string {
   return new Date().toISOString()
@@ -155,7 +155,7 @@ export const useNotes = create<NotesState>((set, get) => ({
     const col: Collection = {
       id: nanoid(),
       name: trimmed,
-      color: '#28f5c4',
+      color: '#e4576b',
     }
     set((s) => ({ collections: [...s.collections, col] }))
     void get().persist()

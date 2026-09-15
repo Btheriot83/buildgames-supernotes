@@ -4,7 +4,7 @@ Local-first **notecard** desk: small linked cards, tags & collections, instant s
 
 **Live demo:** https://buildgames-supernotes.vercel.app
 
-**Aesthetic:** Inkwell Desk — deep ink navy, warm paper cards, mint links, brass accents; Fraunces + IBM Plex.
+**Aesthetic:** Index Drawer — warm paper desk, Literata card titles, Source Sans UI, coral actions, olive/brass collection dots; AI auto-tag / summarize / link suggest.
 
 ## Stack
 
@@ -41,3 +41,12 @@ Deliberately excluded (paid / platform advantages): real-time collaboration, clo
 ## License
 
 Personal Build Games candidate for Brandon Theriot.
+
+
+## AI assist
+
+Editor actions: **Auto-tag**, **Summarize**, **Suggest links**.
+
+- With `BUILD_GAMES_LLM_API_KEY` / `XAI_API_KEY` / `OPENAI_API_KEY` on the server → real LLM via `/api/ai`.
+- Without keys → honest local craft (TF-style tags, extractive summary, cosine link suggest). Never canned lorem.
+See `.env.example`.

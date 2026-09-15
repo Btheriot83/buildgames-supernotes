@@ -4,9 +4,9 @@ import type { Collection, Note, Snapshot } from './types'
 const now = () => new Date().toISOString()
 
 export function buildSample(): Snapshot {
-  const inbox: Collection = { id: nanoid(), name: 'Inbox', color: '#268dea' }
-  const research: Collection = { id: nanoid(), name: 'Research', color: '#28f5c4' }
-  const projects: Collection = { id: nanoid(), name: 'Projects', color: '#e8a14a' }
+  const inbox: Collection = { id: nanoid(), name: 'Inbox', color: '#3d7ea6' }
+  const research: Collection = { id: nanoid(), name: 'Research', color: '#5f7a4a' }
+  const projects: Collection = { id: nanoid(), name: 'Projects', color: '#c48a3a' }
 
   const t0 = now()
   const mk = (
@@ -31,12 +31,12 @@ export function buildSample(): Snapshot {
     'Welcome to Inkwell',
     `SAMPLE — small linked notecards, not sprawling documents.
 
-Write short cards. Link them with [[wiki links]]. Tag freely. Export a folder of Markdown whenever you want a backup.
+Write short cards. Link them with [[wiki links]]. Tag freely. Use Auto-tag / Summarize / Suggest links in the editor. Export Markdown whenever you want a backup.
 
 Try opening [[Zettelkasten habit]] or filtering by the research collection.`,
     ['sample', 'start'],
     inbox.id,
-    '#f4efe6',
+    '#fff8ef',
   )
 
   const zettel = mk(
@@ -48,7 +48,7 @@ Capture → link → revisit. Backlinks appear automatically when other cards me
 See also [[Atomic notes]] and [[Export Markdown]].`,
     ['sample', 'method'],
     research.id,
-    '#eef6f2',
+    '#f3f7f1',
   )
 
   const atomic = mk(
@@ -58,7 +58,7 @@ See also [[Atomic notes]] and [[Export Markdown]].`,
 If a thought grows, split it. Link back to [[Welcome to Inkwell]] so the trail stays visible.`,
     ['sample', 'method'],
     research.id,
-    '#f7f1e8',
+    '#fff1ea',
   )
 
   const exportMd = mk(
@@ -68,7 +68,7 @@ If a thought grows, split it. Link back to [[Welcome to Inkwell]] so the trail s
 Frontmatter includes tags and collection. No accounts. Your notes live in IndexedDB until you export.`,
     ['sample', 'backup'],
     projects.id,
-    '#f3ebe3',
+    '#f7efe3',
   )
 
   const shortcuts = mk(
@@ -78,7 +78,7 @@ Frontmatter includes tags and collection. No accounts. Your notes live in Indexe
 Search matches title, body, and tags instantly.`,
     ['sample', 'ux'],
     inbox.id,
-    '#eef2f7',
+    '#f1f4fa',
   )
 
   return {

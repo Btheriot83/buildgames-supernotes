@@ -1,6 +1,14 @@
-import { useMemo } from 'react'
+import { useMemo, useState } from 'react'
 import { backlinks } from '../lib/links'
-import { useNotes } from '../store/notesStore'
+import {
+  autotagCard,
+  suggestLinks,
+  summarizeCard,
+  type AiLinks,
+  type AiSummary,
+  type AiTags,
+} from '../lib/aiAssist'
+import { allTags, useNotes } from '../store/notesStore'
 
 export function EditorPanel() {
   const open = useNotes((s) => s.editorOpen)
@@ -11,15 +19,94 @@ export function EditorPanel() {
   const deleteNote = useNotes((s) => s.deleteNote)
   const closeEditor = useNotes((s) => s.closeEditor)
   const openNote = useNotes((s) => s.openNote)
+  const showToast = useNotes((s) => s.showToast)
 
   const note = notes.find((n) => n.id === selectedId) ?? null
   const links = useMemo(() => (note ? backlinks(note, notes) : []), [note, notes])
+  const deskTags = useMemo(() => allTags(notes), [notes])
+
+  const [busy, setBusy] = useState<'summarize' | 'autotag' | 'link' | null>(null)
+  const [summary, setSummary] = useState<AiSummary | null>(null)
+  const [tagResult, setTagResult] = useState<AiTags | null>(null)
+  const [linkResult, setLinkResult] = useState<AiLinks | null>(null)
+
+  const resetAi = () => {
+    setSummary(null)
+    setTagResult(null)
+    setLinkResult(null)
+  }
+
+  const runSummarize = async () => {
+    if (!note) return
+    setBusy('summarize')
+    try {
+      const out = await summarizeCard(note.title, note.body)
+      setSummary(out)
+      showToast(out.mode === 'llm' ? `Summary · ${out.provider}` : 'Summary · local craft')
+    } finally {
+      setBusy(null)
+    }
+  }
+
+  const runAutotag = async () => {
+    if (!note) return
+    setBusy('autotag')
+    try {
+      const out = await autotagCard(note.title, note.body, deskTags)
+      setTagResult(out)
+      const merged = [...new Set([...note.tags, ...out.tags])].slice(0, 12)
+      updateNote(note.id, { tags: merged })
+      showToast(out.mode === 'llm' ? `Tagged · ${out.provider}` : 'Tagged · local craft')
+    } finally {
+      setBusy(null)
+    }
+  }
+
+  const runLinks = async () => {
+    if (!note) return
+    setBusy('link')
+    try {
+      const out = await suggestLinks(note, notes)
+      setLinkResult(out)
+      showToast(out.mode === 'llm' ? `Links · ${out.provider}` : 'Links · local craft')
+    } finally {
+      setBusy(null)
+    }
+  }
+
+  const insertLink = (title: string) => {
+    if (!note) return
+    const wiki = `[[${title}]]`
+    if (note.body.includes(wiki)) {
+      showToast('Already linked')
+      return
+    }
+    const next = note.body.trim() ? `${note.body.trim()}\n\nSee also ${wiki}.` : `See also ${wiki}.`
+    updateNote(note.id, { body: next })
+    showToast(`Linked [[${title}]]`)
+  }
+
+  const applySummary = () => {
+    if (!note || !summary) return
+    const block = `> ${summary.summary}`
+    if (note.body.includes(summary.summary)) {
+      showToast('Summary already in card')
+      return
+    }
+    updateNote(note.id, {
+      body: note.body.trim() ? `${block}\n\n${note.body.trim()}` : block,
+    })
+    showToast('Summary pinned to card')
+  }
 
   return (
     <>
       <div
         className={`editor-scrim t-modal${open && note ? ' is-open' : ''}`}
-        onClick={closeEditor}
+        onClick={() => {
+          closeEditor()
+          resetAi()
+        }}
         aria-hidden={!open}
       />
       <aside
@@ -32,7 +119,14 @@ export function EditorPanel() {
         {note && (
           <>
             <div className="editor-head">
-              <button type="button" className="btn ghost" onClick={closeEditor}>
+              <button
+                type="button"
+                className="btn ghost"
+                onClick={() => {
+                  closeEditor()
+                  resetAi()
+                }}
+              >
                 Close
               </button>
               <button
@@ -92,6 +186,76 @@ export function EditorPanel() {
               placeholder="Write the card. Link with [[Other card title]]."
               spellCheck
             />
+
+            <section className="ai-assist" aria-label="AI card assist">
+              <h3>Link &amp; polish</h3>
+              <p className="ai-meta">
+                Auto-tag · summarize · suggest [[links]] — API when keyed, local craft otherwise
+              </p>
+              <div className="ai-actions">
+                <button
+                  type="button"
+                  className="btn tiny"
+                  disabled={busy !== null}
+                  onClick={() => void runAutotag()}
+                >
+                  {busy === 'autotag' ? 'Tagging…' : 'Auto-tag'}
+                </button>
+                <button
+                  type="button"
+                  className="btn tiny"
+                  disabled={busy !== null}
+                  onClick={() => void runSummarize()}
+                >
+                  {busy === 'summarize' ? 'Summarizing…' : 'Summarize'}
+                </button>
+                <button
+                  type="button"
+                  className="btn tiny solid"
+                  disabled={busy !== null}
+                  onClick={() => void runLinks()}
+                >
+                  {busy === 'link' ? 'Finding…' : 'Suggest links'}
+                </button>
+              </div>
+              {summary && (
+                <div className="ai-result">
+                  <strong>{summary.mode === 'llm' ? 'LLM summary' : 'Local summary'}</strong>
+                  <p style={{ margin: '0.35rem 0' }}>{summary.summary}</p>
+                  <button type="button" className="btn tiny" onClick={applySummary}>
+                    Pin to card
+                  </button>
+                </div>
+              )}
+              {tagResult && (
+                <div className="ai-result">
+                  <strong>{tagResult.mode === 'llm' ? 'LLM tags' : 'Local tags'}</strong>
+                  <p style={{ margin: '0.35rem 0' }}>{tagResult.tags.join(' · ') || '—'}</p>
+                </div>
+              )}
+              {linkResult && (
+                <div className="ai-result">
+                  <strong>{linkResult.mode === 'llm' ? 'LLM links' : 'Local links'}</strong>
+                  {linkResult.links.length === 0 ? (
+                    <p className="muted" style={{ margin: '0.35rem 0 0' }}>
+                      No strong matches yet — write a bit more or add another card.
+                    </p>
+                  ) : (
+                    <ul>
+                      {linkResult.links.map((l) => (
+                        <li key={l.id}>
+                          <button type="button" onClick={() => insertLink(l.title)}>
+                            [[{l.title}]]
+                            <span className="reason">{l.reason}</span>
+                          </button>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              )}
+            </section>
+
             <section className="backlinks">
               <h3>
                 Backlinks{' '}

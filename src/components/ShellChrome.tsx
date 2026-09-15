@@ -10,7 +10,7 @@ export function ShellChrome() {
   return (
     <header className="shell-chrome">
       <div className="brand">
-        <span className="brand-mark" aria-hidden="true" />
+        <span className="brand-mark" role="img" aria-label="Inkwell mark" />
         <div>
           <h1 className="t-texts-reveal" data-state="in">
             Inkwell
@@ -19,7 +19,7 @@ export function ShellChrome() {
             <span className="t-number-pop-in" key={count} data-state="in">
               {count}
             </span>{' '}
-            cards · local desk
+            linked cards · local desk
           </p>
         </div>
       </div>
