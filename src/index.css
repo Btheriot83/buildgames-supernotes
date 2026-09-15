@@ -467,10 +467,10 @@ button { cursor: pointer; }
   margin: 0;
   font-family: var(--font-display);
   font-optical-sizing: auto;
-  font-size: 1.12rem;
-  line-height: 1.2;
-  letter-spacing: -0.038em;
-  font-weight: 600;
+  font-size: 1.08rem;
+  line-height: 1.18;
+  letter-spacing: -0.04em;
+  font-weight: 650;
   color: var(--ink);
 }
 .note-card p {
