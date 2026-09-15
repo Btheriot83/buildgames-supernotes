@@ -126,10 +126,10 @@ button { cursor: pointer; }
 }
 .brand { display: flex; gap: 0.85rem; align-items: center; }
 .brand-mark {
-  width: 42px; height: 42px; border-radius: 8px;
+  width: 40px; height: 40px; border-radius: 8px;
   background: var(--paper-card) url('/art/brand-mark.png') center/cover no-repeat;
-  border: 1px solid var(--line-strong);
-  box-shadow: 0 2px 0 rgba(43,42,45,0.06), 0 6px 14px rgba(40, 30, 10, 0.08);
+  border: 1px solid var(--line);
+  box-shadow: 0 1px 0 rgba(43,42,45,0.04), 0 4px 10px rgba(40, 30, 10, 0.05);
   flex: 0 0 auto;
 }
 .brand-mark.fallback {
@@ -451,10 +451,10 @@ button { cursor: pointer; }
 .card-tab {
   position: absolute;
   left: 0; top: 0; bottom: 0;
-  width: 9px;
+  width: 7px;
   background: var(--tab, var(--brass));
   z-index: 2;
-  box-shadow: 1px 0 0 rgba(43,42,45,0.08);
+  box-shadow: none;
 }
 /* Faint ruled lines — flat SVG lines, not a color gradient */
 .card-rules {
@@ -600,13 +600,13 @@ button { cursor: pointer; }
 .editor-body::placeholder { color: var(--mute-soft); }
 
 .ai-assist {
-  border: 2px solid var(--coral-border);
+  border: 1px solid var(--line-strong);
   background: #fff;
   border-radius: 8px;
-  padding: 0.8rem 0.9rem;
+  padding: 0.85rem 0.95rem;
   display: grid;
   gap: 0.55rem;
-  box-shadow: 0 2px 0 rgba(217, 74, 92, 0.08);
+  box-shadow: none;
 }
 .ai-assist h3 {
   margin: 0;
