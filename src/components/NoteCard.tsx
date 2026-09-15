@@ -58,8 +58,8 @@ export function NoteCard({ note }: { note: Note }) {
       <p>{renderBodyPreview(note.body)}</p>
       <div className="card-tags">
         {note.tags.slice(0, 1).map((t) => (
-          <span key={t} className="tag-chip tiny">
-            {t}
+          <span key={t} className="tag-chip tiny hashish">
+            #{t}
           </span>
         ))}
         {outbound.slice(0, 1).map((t) => (
