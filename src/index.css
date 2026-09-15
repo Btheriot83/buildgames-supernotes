@@ -212,8 +212,8 @@ button { cursor: pointer; }
   border-radius: 999px;
   font-weight: 700;
   letter-spacing: -0.028em;
-  box-shadow: 0 2px 8px rgba(217, 74, 92, 0.22);
-  padding: 0.68rem 1.4rem;
+  box-shadow: none;
+  padding: 0.62rem 1.25rem;
 }
 .btn.solid:hover { background: var(--coral-deep); border-color: var(--coral-deep); }
 .btn.export {
@@ -279,18 +279,18 @@ button { cursor: pointer; }
 .search-bar { position: relative; margin-bottom: 1.15rem; }
 .search-input {
   width: 100%;
-  border: 1px solid rgba(43, 42, 45, 0.18);
-  border-color: rgba(43, 42, 45, 0.18);
-  background: #fff;
-  border-radius: 999px;
-  padding: 0.88rem 1.2rem;
+  border: 0;
+  border-bottom: 1px solid rgba(43, 42, 45, 0.18);
+  border-radius: 0;
+  background: transparent;
+  padding: 0.72rem 0.15rem;
   padding-right: 9.5rem;
   outline: none;
   box-shadow: none;
   transition: border-color 140ms ease, box-shadow 140ms ease;
-  font-size: 1rem;
-  font-weight: 450;
-  letter-spacing: -0.016em;
+  font-size: 1.02rem;
+  font-weight: 400;
+  letter-spacing: -0.014em;
   color: var(--ink);
 }
 .search-input::placeholder {
@@ -298,8 +298,8 @@ button { cursor: pointer; }
   font-weight: 400;
 }
 .search-input:focus {
-  border-color: rgba(217, 74, 92, 0.55);
-  box-shadow: 0 0 0 3px rgba(217, 74, 92, 0.1);
+  border-color: var(--ink);
+  box-shadow: none;
 }
 .search-meta {
   position: absolute; right: 0.55rem; top: 50%;
@@ -332,10 +332,10 @@ button { cursor: pointer; }
 }
 
 .sidebar {
-  background: #fffcf8;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  padding: 0.95rem;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  padding: 0.35rem 0.25rem 0.95rem 0;
   box-shadow: none;
 }
 .sidebar h2 {
@@ -361,26 +361,28 @@ button { cursor: pointer; }
 .view-tabs {
   display: grid; grid-template-columns: 1fr 1fr;
   position: relative;
-  background: var(--paper-2);
-  border-radius: 999px;
-  padding: 3px;
-  margin-bottom: 0.4rem;
+  background: transparent;
+  border-radius: 0;
+  padding: 0 0 0.55rem;
+  margin-bottom: 0.55rem;
+  border-bottom: 1px solid var(--line);
 }
 .t-tabs-indicator {
-  position: absolute; top: 3px; bottom: 3px; left: 3px;
-  width: calc(50% - 3px);
-  border-radius: 999px;
-  background: #fff;
-  border: 1px solid var(--line);
+  position: absolute; top: auto; bottom: -1px; left: 0;
+  width: 50%;
+  height: 2px;
+  border-radius: 0;
+  background: var(--ink);
+  border: 0;
   transform: translateX(calc(var(--tabs-i, 0) * 100%));
   transition: transform 280ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 .t-tab {
   position: relative; z-index: 1; border: 0; background: transparent;
-  padding: 0.45rem 0.5rem; border-radius: 999px; color: var(--mute);
+  padding: 0.35rem 0.15rem 0.55rem; border-radius: 0; color: var(--mute);
 }
-.t-tab.is-active { color: var(--ink); font-weight: 700; letter-spacing: -0.02em; }
-.t-tab { font-weight: 500; letter-spacing: -0.015em; font-size: 0.9rem; }
+.t-tab.is-active { color: var(--ink); font-weight: 650; letter-spacing: -0.02em; }
+.t-tab { font-weight: 500; letter-spacing: -0.015em; font-size: 0.88rem; }
 
 .side-item {
   width: 100%; display: flex; align-items: center; gap: 0.45rem;
