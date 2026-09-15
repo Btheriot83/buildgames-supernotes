@@ -34,7 +34,7 @@ export function NoteCard({ note }: { note: Note }) {
       ref={ref}
       type="button"
       className="note-card t-tilt-card"
-      style={{ background: note.color, ['--tab' as string]: tabColor }}
+      style={{ background: 'var(--paper-card)', ['--tab' as string]: tabColor }}
       onClick={() => openNote(note.id)}
       onMouseMove={onMove}
       onMouseLeave={onLeave}

@@ -393,11 +393,15 @@ button { cursor: pointer; }
 .dot {
   width: 8px; height: 8px; border-radius: 50%; display: inline-block; flex: 0 0 auto;
 }
-.add-col { display: flex; gap: 0.35rem; margin-top: 0.5rem; }
+.add-col { display: flex; gap: 0.35rem; margin-top: 0.55rem; }
 .add-col input {
   flex: 1; min-width: 0;
-  border: 1px solid var(--line); background: var(--paper);
-  border-radius: 10px; padding: 0.4rem 0.55rem;
+  border: 1px solid transparent; background: var(--paper);
+  border-radius: 8px; padding: 0.38rem 0.5rem;
+  font-size: 0.88rem; color: var(--mute);
+}
+.add-col input:focus {
+  border-color: var(--line-strong); color: var(--ink); outline: none;
 }
 .tag-cloud { display: flex; flex-wrap: wrap; gap: 0.35rem; }
 .tag-chip {
