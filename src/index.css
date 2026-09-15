@@ -1168,3 +1168,21 @@ button { cursor: pointer; }
   .ob-card { box-shadow: none; }
   .ob-dot.is-active { transform: none; }
 }
+
+
+/* anshu denser grid */
+.card-grid {
+  grid-template-columns: repeat(auto-fill, minmax(232px, 1fr));
+  gap: 1rem;
+}
+.stamp-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 1.5px;
+}
+.job-step.is-core {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(43, 42, 45, 0.22);
+}

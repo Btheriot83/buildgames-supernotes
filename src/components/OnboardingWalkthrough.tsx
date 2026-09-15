@@ -106,6 +106,11 @@ export function OnboardingWalkthrough() {
     const next = step + 1
     writeOnboardStep(next)
     setStep(next)
+    if (ONBOARD_CARDS[next]?.id === 'find') {
+      window.setTimeout(() => {
+        document.getElementById('ink-search')?.focus()
+      }, 80)
+    }
   }
 
   return (
