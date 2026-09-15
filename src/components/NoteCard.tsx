@@ -1,6 +1,6 @@
 import { useRef, type MouseEvent } from 'react'
 import type { Note } from '../lib/types'
-import { renderBodyPreview } from '../lib/links'
+import { extractWikiTitles, renderBodyPreview } from '../lib/links'
 import { useNotes } from '../store/notesStore'
 
 export function NoteCard({ note }: { note: Note }) {
@@ -52,6 +52,11 @@ export function NoteCard({ note }: { note: Note }) {
             {t}
           </span>
         ))}
+        {extractWikiTitles(note.body).length > 0 && (
+          <span className="tag-chip tiny linkish">
+            {extractWikiTitles(note.body).length} links
+          </span>
+        )}
       </div>
     </button>
   )

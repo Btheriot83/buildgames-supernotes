@@ -53,7 +53,7 @@ Generated via Higgsfield `gpt_image_2_5` (Imagine path). Verified in browser fra
 ## Technique 5 — Video / advanced motion
 | Asset | Path | Use |
 |---|---|---|
-| Desk ambient loop | `public/art/empty-desk-loop.mp4` | Empty state `<video autoplay muted loop>` |
+| Desk ambient loop | `public/art/empty-desk-loop.mp4` (Higgsfield seedance_2_5) | Empty state `<video autoplay muted loop playsinline>` |
 | Ink-draw keyframes | `src/components/LinkDraw.tsx` + CSS | Plays when **Find links** returns matches — core job motion |
 
 `transitions.dev` recipes remain for panel/toast only — **supplement**, not the Technique 5 claim.
