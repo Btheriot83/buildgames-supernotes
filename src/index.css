@@ -189,13 +189,13 @@ button { cursor: pointer; }
   border: 1px solid var(--line-strong);
   background: #fff;
   color: var(--ink-soft);
-  border-radius: 10px;
-  padding: 0.64rem 1.2rem;
+  border-radius: 9px;
+  padding: 0.7rem 1.28rem;
   transition: background 140ms ease, border-color 140ms ease, transform 140ms ease, color 140ms ease, box-shadow 140ms ease;
-  font-weight: 650;
-  font-size: 0.95rem;
-  letter-spacing: -0.028em;
-  line-height: 1.12;
+  font-weight: 700;
+  font-size: 0.96rem;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
 }
 .btn:hover { background: var(--paper-2); }
 .btn:active { transform: translateY(1px); }
@@ -208,9 +208,10 @@ button { cursor: pointer; }
   color: #fff;
   border-color: var(--coral-border);
   border-width: 1.5px;
-  font-weight: 750;
-  letter-spacing: -0.032em;
+  font-weight: 780;
+  letter-spacing: -0.034em;
   box-shadow: var(--btn-shadow);
+  padding: 0.72rem 1.35rem;
 }
 .btn.solid:hover { background: var(--coral-deep); border-color: var(--coral-deep); }
 .btn.export {
@@ -235,16 +236,16 @@ button { cursor: pointer; }
 .btn.ghost:hover { background: rgba(26, 24, 22, 0.05); color: var(--ink); }
 /* Text tertiary — matches bar Log in (no chrome) */
 .btn.text {
-  background: transparent;
-  border-color: transparent;
-  color: var(--mute);
-  font-weight: 500;
-  padding: 0.55rem 0.35rem;
+  background: #fff;
+  border-color: var(--line-strong);
+  color: var(--ink-soft);
+  font-weight: 600;
+  padding: 0.62rem 0.95rem;
   box-shadow: none;
   font-size: 0.92rem;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.022em;
 }
-.btn.text:hover { color: var(--ink); background: transparent; text-decoration: underline; text-underline-offset: 3px; }
+.btn.text:hover { color: var(--ink); background: var(--paper); text-decoration: none; border-color: var(--ink); }
 .btn.danger { color: var(--coral-deep); }
 .btn.tiny {
   padding: 0.42rem 0.85rem;
