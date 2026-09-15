@@ -85,5 +85,23 @@
   "doNotMessageBrandon": true,
   "branch": "beat-original-card-stock",
   "finishedAtUtc": "2026-09-15T07:38:43Z",
-  "finishedAtPt": "2026-09-15 12:38 AM PT"
+  "finishedAtPt": "2026-09-15 12:38 AM PT",
+  "pr_url": "https://github.com/Btheriot83/buildgames-supernotes/pull/8",
+  "pr_merged": true,
+  "vercel_deployment": "dpl_77XmjziuH3cSUo6ktTvFeLkUGbbQ",
+  "live_smoke": {
+    "ok": true,
+    "at_pt": "2026-09-15 12:39 AM PT",
+    "http": 200,
+    "shot": "gauntlet/shots-beat/beat18-live-prod-smoke.png",
+    "checks": [
+      "HTTP 200",
+      "hand copy cards on the press",
+      "job strip Linked cards",
+      "Find a card or [[link]]",
+      "0 decorative gradients",
+      "18 beat commits; stopped early win vs bar"
+    ]
+  },
+  "mainSha": "e5e98bf"
 }
