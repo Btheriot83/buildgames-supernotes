@@ -41,9 +41,9 @@ body {
   background: var(--paper);
   color: var(--ink);
   -webkit-font-smoothing: antialiased;
-  letter-spacing: -0.011em;
-  font-size: 16px;
-  line-height: 1.45;
+  letter-spacing: -0.014em;
+  font-size: 15.5px;
+  line-height: 1.48;
 }
 
 button, input, textarea, select {

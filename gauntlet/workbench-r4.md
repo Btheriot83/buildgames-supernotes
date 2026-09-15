@@ -133,3 +133,9 @@ Bar baseline: `gauntlet/shots-r4/bar-supernotes-home.png`
 - verdict: Subtle paper grain closer to dream-target; still zero decorative color gradients; bar mint wash remains different identity.
 - commit: d4d3b3d
 
+## r18 — fonts
+- files: src/index.css (body)
+- shot: gauntlet/shots-r4/r18-body-type.png
+- verdict: Denser Source Sans body; bar SN Pro still wins proprietary calm.
+- commit: 45afdff
+
