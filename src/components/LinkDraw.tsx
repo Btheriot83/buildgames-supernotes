@@ -1,19 +1,20 @@
-/** Keyframe ink-draw between notecard ideas — Technique 5 motion craft (core job). */
+/** Technique 5 — graphite pencil path when Find links returns matches (core job). */
 export function LinkDraw({ active }: { active: boolean }) {
   return (
     <div className={`link-draw${active ? ' is-on' : ''}`} aria-hidden="true">
-      <svg viewBox="0 0 320 48" className="link-draw-svg">
+      <svg viewBox="0 0 320 52" className="link-draw-svg">
         <path
           className="link-draw-path"
-          d="M12 28 C 70 8, 120 44, 160 24 S 250 6, 308 26"
+          d="M14 30 C 58 10, 110 46, 158 26 S 240 8, 306 28"
           fill="none"
           stroke="currentColor"
-          strokeWidth="2.2"
+          strokeWidth="2.4"
           strokeLinecap="round"
         />
-        <circle className="link-draw-dot a" cx="12" cy="28" r="4" />
-        <circle className="link-draw-dot b" cx="308" cy="26" r="4" />
+        <rect className="link-draw-card a" x="4" y="18" width="20" height="24" rx="2" />
+        <rect className="link-draw-card b" x="296" y="16" width="20" height="24" rx="2" />
       </svg>
+      <span className="link-draw-caption">pencil trail between cards</span>
     </div>
   )
 }

@@ -12,7 +12,7 @@ export function LoadingShell({ revealed }: { revealed: boolean }) {
           <div className="skel-line short" />
         </div>
       </div>
-      <p className="loading-label">Laying out the cards…</p>
+      <p className="loading-label">Cutting the stock…</p>
     </div>
   )
 }

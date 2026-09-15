@@ -2,7 +2,7 @@ import { nanoid } from 'nanoid'
 import type { Collection, Note, Snapshot } from './types'
 
 /** Bump when demo deck content changes so IndexedDB reseeds SAMPLE-only desks. */
-export const DEMO_SEED_KEY = 'index-drawer-b2'
+export const DEMO_SEED_KEY = 'card-stock-press-r5'
 
 const now = () => new Date().toISOString()
 

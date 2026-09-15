@@ -41,7 +41,7 @@ interface NotesState {
   dismissToast: () => void
 }
 
-const CARD_COLORS = ['#fff8ef', '#f3f7f1', '#fff1ea', '#f1f4fa', '#f7efe3', '#f6f1e6', '#fdecef']
+const CARD_COLORS = ['#fff8ef', '#f2f6ef', '#fff0e8', '#f0f3f8', '#f6ecdf', '#f5efe4', '#fce8ec']
 
 function stamp(): string {
   return new Date().toISOString()
@@ -128,7 +128,7 @@ export const useNotes = create<NotesState>((set, get) => ({
       editorOpen: true,
     }))
     void get().persist()
-    get().showToast('Card created')
+    get().showToast('Card cut')
   },
 
   updateNote: (id, patch) => {
@@ -166,7 +166,7 @@ export const useNotes = create<NotesState>((set, get) => ({
     const col: Collection = {
       id: nanoid(),
       name: trimmed,
-      color: '#e4576b',
+      color: '#d94a5c',
     }
     set((s) => ({ collections: [...s.collections, col] }))
     void get().persist()
@@ -182,7 +182,7 @@ export const useNotes = create<NotesState>((set, get) => ({
     }
     await exportMarkdownZip(notes, collections)
     set({ successFlash: true })
-    get().showToast('Markdown zip downloaded')
+    get().showToast('Markdown exported')
     window.setTimeout(() => set({ successFlash: false }), 1600)
   },
 
@@ -198,7 +198,7 @@ export const useNotes = create<NotesState>((set, get) => ({
       activeCollectionId: null,
       activeTag: null,
     })
-    get().showToast('Demo desk restored')
+    get().showToast('Press restored')
   },
 
   clearAll: async () => {

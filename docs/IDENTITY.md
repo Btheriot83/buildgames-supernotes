@@ -1,48 +1,52 @@
-# IDENTITY — Inkwell (LOCKED)
+# IDENTITY — Inkwell (LOCKED R5)
 
-**Aesthetic name:** Index Drawer  
-**Phase A locked:** 2026-09-14 PT  
-**Do not reseed or rebrand in Phase B.**
+**Aesthetic name:** Card Stock Press  
+**Phase A locked:** 2026-09-14 ~11:50pm PT (R5 WEAK Anshu reseed)  
+**Prior:** Index Drawer (soft/AI-adjacent — discarded)  
+**Do not reseed again in Phase B gauntlet rounds.**
 
 ## Feel
-A wooden desk after rain: cream index cards, dry paper under the thumb, brass catching window light. Linking is a pencil line between cards — not a knowledge-graph product.
+Thick uncoated index cards under the thumb: faint ruled lines, left color tab, rubber-stamp collection marks. Linking is a graphite pencil trail between two cards — not a knowledge-graph product. The press is a desk tool: linked cards → search → export Markdown.
 
 ## Palette (frozen)
-- Paper: `#f7f3eb` / `#efe8dc`
-- Ink text: `#1c1a17` / mute `#6e675c`
-- Coral action: `#e4576b` (outside AI purple band)
-- Olive / brass / sky collection dots: `#5f7a4a` / `#c48a3a` / `#3d7ea6`
-- Mint wash background only: `#e7f3ee` (wash, not neon CTA)
+- Paper: `#f4efe6` / `#ebe3d6`
+- Card stock: tinted flat fills only (`#fff8ef`, sage, blush, sky tint)
+- Ink text: `#2b2a2d` / mute `#5a575c`
+- Coral action: `#d94a5c` (outside AI purple band; punched from soft `#e4576b`)
+- Olive / brass / sky stamps: `#5f7a4a` / `#c48a3a` / `#3d7ea6`
 
 ## Type (frozen)
 - Display / card titles / wordmark: **Literata**
 - UI body: **Source Sans 3**
-- Mono: IBM Plex Mono (counts only)
+- Mono: IBM Plex Mono (counts + wiki chips)
 - Never: Inter, Geist, Space Grotesk, Fraunces-as-UI
 
 ## Materials
-- Real desk photography: `public/art/empty-desk.png`
-- Brand mark image: `public/art/brand-mark.png`
-- Ambient empty loop when present: `public/art/empty-desk-loop.mp4`
+- Card stock texture: `public/art/card-stock.png` (on `.card-rules` only)
+- Brand stamp: `public/art/brand-mark.png`
+- Empty desk still + loop: `public/art/empty-desk.png`, `public/art/empty-desk-loop.mp4`
+- Ruled SVG lines + left color tab on every card
 - Opaque paper panels (no glassmorphism)
+- **Zero decorative color gradients**
 
 ## Motion rules
 - Card tilt: subtle, physical
 - Editor: panel slide
-- **Core job craft:** ink-path draw (`LinkDraw`) when Find links returns matches
+- **Core job craft:** graphite path (`LinkDraw`) when Find links returns matches — card stubs at ends
 - transitions.dev = supplemental chrome only
 - Respect `prefers-reduced-motion`
 
 ## Copy voice
-Short, specific, stationery-human. Prefer “Find links / Tighten / Tag” over tooling jargon. See DELIVER Tech 8 log — voice locked; Phase B may only light-tighten.
+Short, press-room honest. Prefer “Cut a card / Pencil a [[link]] / Export Markdown” over tooling jargon.
 
 ## Core job (unchanged)
-Linked notecards: write → [[link]] → backlinks → Tag / Tighten / Find links → Export Markdown.
+Linked notecards: write → [[link]] → search → Export Markdown (+ Tag / Tighten / Find links).
 
 ## What we will NOT change in Phase B
-- Aesthetic name or seed
-- Light paper desk → back to Night Press dark
+- Aesthetic name Card Stock Press or seed
+- Soft Index Drawer revival
 - Coral → vibe purple / indigo
 - Literata+Source Sans pairing
 - Removing AI assist or wiki linking
 - Adding graph viz, accounts, collab, FAQ, fake stats
+- Decorative gradients
