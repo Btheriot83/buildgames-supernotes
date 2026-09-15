@@ -138,12 +138,7 @@ Linked from [[Monsoon window]] and [[Search before you stack]] on purpose — ba
 
 /** True when local desk is still an old SAMPLE / prior seed and safe to replace. */
 export function shouldReseedDemo(snap: Snapshot): boolean {
+  // Seed key bump (R5 Card Stock Press) always refreshes the demo desk.
   if (snap.seedKey === DEMO_SEED_KEY) return false
-  if (snap.notes.length === 0) return true
-  // Old Phase A/B deck: every card flagged sample, or classic SAMPLE titles
-  const allSample = snap.notes.every((n) => n.sample)
-  const classic =
-    snap.notes.some((n) => n.title === 'Welcome to Inkwell') &&
-    snap.notes.some((n) => /SAMPLE\s*—/.test(n.body))
-  return allSample || classic
+  return true
 }
