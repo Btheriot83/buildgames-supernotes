@@ -56,7 +56,7 @@ export function EditorPanel() {
     try {
       const out = await summarizeCard(note.title, note.body)
       setSummary(out)
-      showToast(out.mode === 'llm' ? 'Tightened' : 'Tightened on-desk')
+      showToast('Shortened')
     } finally {
       setBusy(null)
     }
@@ -70,7 +70,7 @@ export function EditorPanel() {
       setTagResult(out)
       const merged = [...new Set([...note.tags, ...out.tags])].slice(0, 12)
       updateNote(note.id, { tags: merged })
-      showToast(out.mode === 'llm' ? 'Tags applied' : 'Tags from the text')
+      showToast('Tags from the text')
     } finally {
       setBusy(null)
     }
@@ -82,7 +82,7 @@ export function EditorPanel() {
     try {
       const out = await suggestLinks(note, notes)
       setLinkResult(out)
-      showToast(out.mode === 'llm' ? 'Links found' : 'Nearby cards')
+      showToast('Nearby cards')
     } finally {
       setBusy(null)
     }
@@ -104,13 +104,13 @@ export function EditorPanel() {
     if (!note || !summary) return
     const block = `> ${summary.summary}`
     if (note.body.includes(summary.summary)) {
-      showToast('Summary already in card')
+      showToast('Already on the card')
       return
     }
     updateNote(note.id, {
       body: note.body.trim() ? `${block}\n\n${note.body.trim()}` : block,
     })
-    showToast('Summary pinned to card')
+    showToast('Kept on the card')
   }
 
   return (
@@ -159,7 +159,7 @@ export function EditorPanel() {
               value={note.title}
               onChange={(e) => updateNote(note.id, { title: e.target.value })}
               aria-label="Title"
-              placeholder="Untitled card"
+              placeholder="Card title"
             />
             <div className="editor-meta">
               <label>
@@ -228,7 +228,7 @@ export function EditorPanel() {
                   disabled={busy !== null}
                   onClick={() => void runSummarize()}
                 >
-                  {busy === 'summarize' ? 'Tightening…' : 'Tighten'}
+                  {busy === 'summarize' ? 'Shortening…' : 'Shorten'}
                 </button>
                 <button
                   type="button"
@@ -236,27 +236,27 @@ export function EditorPanel() {
                   disabled={busy !== null}
                   onClick={() => void runLinks()}
                 >
-                  {busy === 'link' ? 'Tracing…' : 'Find links'}
+                  {busy === 'link' ? 'Looking…' : 'Find links'}
                 </button>
               </div>
               {summary && (
                 <div className="ai-result">
-                  <strong>Tightened</strong>
+                  <strong>Short take</strong>
                   <p style={{ margin: '0.35rem 0' }}>{summary.summary}</p>
                   <button type="button" className="btn tiny" onClick={applySummary}>
-                    Keep on card
+                    Keep
                   </button>
                 </div>
               )}
               {tagResult && (
                 <div className="ai-result">
-                  <strong>Suggested tags</strong>
+                  <strong>Tags</strong>
                   <p style={{ margin: '0.35rem 0' }}>{tagResult.tags.join(' · ') || '—'}</p>
                 </div>
               )}
               {linkResult && (
                 <div className="ai-result">
-                  <strong>Nearby cards</strong>
+                  <strong>Nearby</strong>
                   {linkResult.links.length === 0 ? (
                     <p className="muted" style={{ margin: '0.35rem 0 0' }}>
                       No nearby cards yet — write a little more.

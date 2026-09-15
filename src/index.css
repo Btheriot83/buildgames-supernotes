@@ -1448,3 +1448,24 @@ button { cursor: pointer; }
     transition: none;
   }
 }
+
+
+/* craft3: remove AI tells — quieter tools, no product-panel box */
+.ai-assist .btn.tiny.solid {
+  background: transparent;
+  color: var(--coral-deep);
+  border: 1px solid rgba(185, 56, 74, 0.45);
+  box-shadow: none;
+}
+.ai-assist .btn.tiny.solid:hover {
+  background: rgba(217, 74, 92, 0.06);
+  border-color: var(--coral-deep);
+  color: var(--coral-deep);
+}
+.ai-result strong {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 550;
+  color: var(--mute);
+  letter-spacing: -0.01em;
+}
