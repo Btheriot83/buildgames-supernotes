@@ -39,7 +39,7 @@ export function Sidebar() {
 
       <section>
         <div className="side-head">
-          <h2>Collections</h2>
+          <h2>Folders</h2>
           <button
             type="button"
             className="side-add"
@@ -98,32 +98,34 @@ export function Sidebar() {
         )}
       </section>
 
-      <section>
+      <section className="tag-rail">
         <h2>Tags</h2>
-        <div className="tag-cloud">
+        <div className="tag-nest">
           {shownTags.map((t) => (
             <button
               key={t}
               type="button"
-              className={`tag-chip${activeTag === t ? ' is-active' : ''}`}
+              className={`tag-line${activeTag === t ? ' is-active' : ''}`}
               onClick={() => setTagFilter(activeTag === t ? null : t)}
             >
+              <span className="tag-hash">#</span>
               {t}
             </button>
           ))}
           {extra > 0 && !activeTag && (
-            <span className="tag-more muted">{extra} more</span>
+            <span className="tag-more muted">{extra} more from cards</span>
           )}
           {activeTag && !shownTags.includes(activeTag) && (
             <button
               type="button"
-              className="tag-chip is-active"
+              className="tag-line is-active"
               onClick={() => setTagFilter(null)}
             >
+              <span className="tag-hash">#</span>
               {activeTag}
             </button>
           )}
-          {tags.length === 0 && <p className="muted">No tags yet</p>}
+          {tags.length === 0 && <p className="muted">Tags come from card text</p>}
         </div>
       </section>
     </aside>

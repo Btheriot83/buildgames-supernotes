@@ -24,7 +24,7 @@ export function ShellChrome() {
             </p>
           </div>
         </div>
-        <nav className="job-strip" aria-label="What this desk does">
+        <nav className="job-strip" aria-label="What this press does">
           <span className="job-step is-core">Linked cards</span>
           <span className="job-arrow" aria-hidden>
             →
@@ -38,13 +38,13 @@ export function ShellChrome() {
       </div>
       <div className="chrome-actions">
         <button type="button" className="btn text" onClick={() => void resetSample()}>
-          Restore desk
+          Reset press
         </button>
         <button type="button" className="btn export" onClick={() => void exportZip()}>
           Export Markdown
         </button>
         <button type="button" className="btn solid" onClick={createNote}>
-          New card
+          Cut a card
         </button>
       </div>
     </header>
