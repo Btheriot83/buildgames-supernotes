@@ -102,3 +102,9 @@ Bar baseline: `gauntlet/shots-r4/bar-supernotes-home.png`
 - verdict: Restore reads as Log-in-style tertiary; bar still quieter overall chrome.
 - commit: 04e4d95
 
+## r13 — bar gap (dream close)
+- files: src/index.css (.desk-status)
+- shot: gauntlet/shots-r4/r13-desk-status.png
+- verdict: Status rail chrome removed like dream-target; bar marketing has no tool status rail.
+- commit: a9af777
+

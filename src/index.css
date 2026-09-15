@@ -723,15 +723,15 @@ button { cursor: pointer; }
 .desk-stack { display: grid; gap: 0.75rem; }
 .desk-status {
   display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.35rem 0.45rem;
-  padding: 0.55rem 0.85rem;
-  background: #fff;
-  border: 1px solid var(--line);
-  border-radius: 12px;
+  padding: 0.4rem 0.15rem 0.55rem;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
   color: var(--mute);
-  font-size: 0.88rem;
-  letter-spacing: -0.01em;
+  font-size: 0.86rem;
+  letter-spacing: -0.015em;
 }
-.desk-status strong { color: var(--ink); font-weight: 600; font-weight: 600; }
+.desk-status strong { color: var(--ink); font-weight: 700; letter-spacing: -0.02em; }
 .desk-status-sep { opacity: 0.5; }
 
 .card-link-meta {
