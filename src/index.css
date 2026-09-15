@@ -1191,13 +1191,13 @@ button { cursor: pointer; }
 
 /* craft1: editor as hero — typography-first writing surface */
 .editor-panel {
-  width: min(680px, 100%);
-  padding: 1.45rem 2.1rem 2.8rem;
-  gap: 0.85rem;
+  width: min(720px, 100%);
+  padding: 1.55rem 2.35rem 3rem;
+  gap: 0.75rem;
   background: #fffcf7;
 }
 .editor-scrim {
-  background: rgba(28, 26, 23, 0.28);
+  background: rgba(28, 26, 23, 0.34);
 }
 .editor-title {
   font-size: clamp(1.85rem, 2.6vw, 2.35rem);
@@ -1226,10 +1226,10 @@ button { cursor: pointer; }
   padding-bottom: 0.35rem;
 }
 .editor-meta label {
-  font-size: 0.72rem;
-  font-weight: 550;
-  letter-spacing: 0.01em;
-  text-transform: uppercase;
+  font-size: 0.74rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  text-transform: none;
   color: var(--mute-soft);
 }
 .editor-meta input,
@@ -1263,7 +1263,7 @@ button { cursor: pointer; }
 .app-frame.is-writing .shell-chrome,
 .app-frame.is-writing .search-bar,
 .app-frame.is-writing .desk {
-  opacity: 0.42;
+  opacity: 0.22;
   transition: opacity 280ms ease;
   pointer-events: none;
   user-select: none;
@@ -1330,10 +1330,10 @@ button { cursor: pointer; }
 .ai-assist .assist-heading,
 .ai-assist h3 {
   font-family: var(--font-body);
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
+  font-size: 0.78rem;
+  font-weight: 550;
+  letter-spacing: -0.01em;
+  text-transform: none;
   color: var(--mute-soft);
 }
 .ai-assist .ai-meta {
@@ -1374,10 +1374,10 @@ button { cursor: pointer; }
 }
 .backlinks h3 {
   font-family: var(--font-body);
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
+  font-size: 0.78rem;
+  font-weight: 550;
+  letter-spacing: -0.01em;
+  text-transform: none;
   color: var(--mute-soft);
 }
 

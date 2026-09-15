@@ -163,7 +163,7 @@ export function EditorPanel() {
             />
             <div className="editor-meta">
               <label>
-                Collection
+                Folder
                 <select
                   value={note.collectionId ?? ''}
                   onChange={(e) =>
@@ -181,7 +181,7 @@ export function EditorPanel() {
                 </select>
               </label>
               <label>
-                Tags (comma)
+                Tags
                 <input
                   value={note.tags.join(', ')}
                   onChange={(e) =>
