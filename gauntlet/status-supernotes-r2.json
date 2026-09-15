@@ -8,7 +8,7 @@
   "path": "/workspace/build-games/apps/supernotes",
   "identityLocked": "Index Drawer",
   "identityReseeded": false,
-  "jobClarity": "Write → Link → Search → Export Markdown",
+  "jobClarity": "Write \u2192 Link \u2192 Search \u2192 Export Markdown",
   "jobUnder3s": true,
   "phaseA": {
     "done": true,
@@ -36,15 +36,24 @@
   },
   "live_smoke": {
     "ok": true,
-    "at_pt": "pending_redeploy",
+    "at_pt": "2026-09-14 9:18 PM PT",
+    "http": 200,
     "checks": [
-      "no SAMPLE badges",
-      "job strip Write→Link→Search→Export",
-      "search diesel → 4 of 8",
-      "wiki chips + backlink meta",
-      "Export Markdown zip + success overlay"
-    ]
+      "HTTP 200",
+      "SAMPLE count 0",
+      "job strip Write\u2192Link\u2192Search\u2192Export Markdown",
+      "search diesel \u2192 4 of 8",
+      "Find links \u2192 Nearby cards",
+      "Export Markdown zip inkwell-notes-*.zip"
+    ],
+    "shot": "gauntlet/shots-r2/r2-live-prod-smoke.png"
   },
   "doNotMessageBrandon": true,
-  "branch": "phase-b2-gauntlet-r2"
+  "branch": "phase-b2-gauntlet-r2",
+  "mainSha": "1b68dcb",
+  "pr_url": "https://github.com/Btheriot83/buildgames-supernotes/pull/2",
+  "pr_merged": true,
+  "vercel_deployment": "dpl_PrdeYHW2zstjC2jDXCBHDdZmCsTA",
+  "finishedAtUtc": "2026-09-15T04:18:48Z",
+  "finishedAtPt": "2026-09-14 9:18 PM PT"
 }
