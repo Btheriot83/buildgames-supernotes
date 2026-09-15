@@ -37,7 +37,7 @@ export default function App() {
       <InkBg />
       <LoadingShell revealed={!booting} />
       {ready && (
-        <div className="app-frame">
+        <div className={`app-frame${editorOpen ? ' is-writing' : ''}`}>
           <ShellChrome />
           <SearchBar />
           <div className="desk">

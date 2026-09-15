@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { backlinks } from '../lib/links'
 import {
   autotagCard,
@@ -25,6 +25,19 @@ export function EditorPanel() {
   const note = notes.find((n) => n.id === selectedId) ?? null
   const links = useMemo(() => (note ? backlinks(note, notes) : []), [note, notes])
   const deskTags = useMemo(() => allTags(notes), [notes])
+  const titleRef = useRef<HTMLInputElement>(null)
+  const bodyRef = useRef<HTMLTextAreaElement>(null)
+
+  useEffect(() => {
+    if (!open || !note) return
+    const id = window.setTimeout(() => {
+      const el = titleRef.current
+      if (!el) return
+      el.focus()
+      el.setSelectionRange(el.value.length, el.value.length)
+    }, 40)
+    return () => window.clearTimeout(id)
+  }, [open, note?.id])
 
   const [busy, setBusy] = useState<'summarize' | 'autotag' | 'link' | null>(null)
   const [summary, setSummary] = useState<AiSummary | null>(null)
@@ -128,7 +141,7 @@ export function EditorPanel() {
                   resetAi()
                 }}
               >
-                Close
+                Desk
               </button>
               <button
                 type="button"
@@ -141,10 +154,12 @@ export function EditorPanel() {
               </button>
             </div>
             <input
+              ref={titleRef}
               className="editor-title"
               value={note.title}
               onChange={(e) => updateNote(note.id, { title: e.target.value })}
               aria-label="Title"
+              placeholder="Untitled card"
             />
             <div className="editor-meta">
               <label>
@@ -181,6 +196,7 @@ export function EditorPanel() {
               </label>
             </div>
             <textarea
+              ref={bodyRef}
               className="editor-body"
               value={note.body}
               onChange={(e) => updateNote(note.id, { body: e.target.value })}
@@ -188,11 +204,11 @@ export function EditorPanel() {
               spellCheck
             />
             <p className="editor-hint">
-              Pencil <code>[[Card title]]</code> for a trail. Tag · Tighten · Find links below. Export when you leave.
+              Pencil <code>[[Card title]]</code> for a trail. Tools stay quiet below.
             </p>
 
-            <section className="ai-assist" aria-label="AI card assist">
-              <h3>On the press</h3>
+            <section className="ai-assist" aria-label="Desk tools">
+              <h3 className="assist-heading">Desk tools</h3>
               <p className="ai-meta">
                 Tag · Tighten · Find links
               </p>
@@ -243,7 +259,7 @@ export function EditorPanel() {
                   <strong>Nearby cards</strong>
                   {linkResult.links.length === 0 ? (
                     <p className="muted" style={{ margin: '0.35rem 0 0' }}>
-                      Quiet press — write a little more, or cut another card.
+                      No nearby cards yet — write a little more.
                     </p>
                   ) : (
                     <ul>
@@ -269,7 +285,7 @@ export function EditorPanel() {
                 </span>
               </h3>
               {links.length === 0 ? (
-                <p className="muted">Nothing points here yet. Name this card from another with [[…]].</p>
+                <p className="muted">No backlinks yet. Name this card from another with [[…]].</p>
               ) : (
                 <ul>
                   {links.map((l) => (

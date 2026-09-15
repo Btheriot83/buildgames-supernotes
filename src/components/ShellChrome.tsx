@@ -20,7 +20,7 @@ export function ShellChrome() {
               <span className="t-number-pop-in" key={count} data-state="in">
                 {count}
               </span>{' '}
-              cards · linked · searchable
+              cards on the desk
             </p>
           </div>
         </div>
