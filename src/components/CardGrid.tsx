@@ -9,6 +9,8 @@ export function CardGrid() {
   const createNote = useNotes((s) => s.createNote)
   const view = state.view
   const hasFilters = Boolean(state.query || state.activeCollectionId || state.activeTag)
+  const resetSample = useNotes((s) => s.resetSample)
+
   if (notes.length === 0) {
     return (
       <div className="empty-state">
@@ -35,14 +37,21 @@ export function CardGrid() {
           />
         </div>
         <h3>{hasFilters ? 'No cards match' : 'Empty press'}</h3>
-        <p>
+        <p className="empty-coach">
           {hasFilters
             ? 'Clear search or pick another collection — or cut a fresh card.'
-            : 'Cut a card. Pencil a [[link]]. Search the press. Export Markdown when you leave.'}
+            : 'Empty press — cut a card, or restore the sample desk.'}
         </p>
-        <button type="button" className="btn solid" onClick={createNote}>
-          Cut a card
-        </button>
+        <div className="empty-coach-actions">
+          <button type="button" className="btn solid" onClick={createNote}>
+            Cut a card
+          </button>
+          {!hasFilters && (
+            <button type="button" className="btn export" onClick={() => void resetSample()}>
+              Restore sample
+            </button>
+          )}
+        </div>
       </div>
     )
   }

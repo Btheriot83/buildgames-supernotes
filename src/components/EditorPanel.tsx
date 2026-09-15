@@ -115,7 +115,7 @@ export function EditorPanel() {
         data-open={open && note ? 'true' : 'false'}
         aria-hidden={!open || !note}
         role="dialog"
-        aria-label="Edit notecard"
+        aria-label="Press this card"
       >
         {note && (
           <>
@@ -188,7 +188,7 @@ export function EditorPanel() {
               spellCheck
             />
             <p className="editor-hint">
-              Pencil <code>[[Card title]]</code>. Tags come from the text. Export Markdown when you leave.
+              Pencil <code>[[Card title]]</code> for a trail. Tag · Tighten · Find links below. Export when you leave.
             </p>
 
             <section className="ai-assist" aria-label="AI card assist">
