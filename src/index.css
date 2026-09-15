@@ -189,13 +189,13 @@ button { cursor: pointer; }
   border: 1px solid var(--line-strong);
   background: #fff;
   color: var(--ink-soft);
-  border-radius: 12px;
-  padding: 0.62rem 1.15rem;
+  border-radius: 10px;
+  padding: 0.64rem 1.2rem;
   transition: background 140ms ease, border-color 140ms ease, transform 140ms ease, color 140ms ease, box-shadow 140ms ease;
-  font-weight: 600;
-  font-size: 0.94rem;
-  letter-spacing: -0.025em;
-  line-height: 1.15;
+  font-weight: 650;
+  font-size: 0.95rem;
+  letter-spacing: -0.028em;
+  line-height: 1.12;
 }
 .btn:hover { background: var(--paper-2); }
 .btn:active { transform: translateY(1px); }
@@ -208,8 +208,8 @@ button { cursor: pointer; }
   color: #fff;
   border-color: var(--coral-border);
   border-width: 1.5px;
-  font-weight: 700;
-  letter-spacing: -0.03em;
+  font-weight: 750;
+  letter-spacing: -0.032em;
   box-shadow: var(--btn-shadow);
 }
 .btn.solid:hover { background: var(--coral-deep); border-color: var(--coral-deep); }
