@@ -1,0 +1,87 @@
+{
+  "slug": "supernotes",
+  "product": "Inkwell",
+  "phase": "R6",
+  "status": "integrity_complete_pending_deploy",
+  "demoUrl": "https://buildgames-supernotes.vercel.app",
+  "barUrl": "https://supernotes.app/",
+  "path": "/workspace/build-games/apps/supernotes",
+  "identityLocked": "Card Stock Press",
+  "identityReseeded": false,
+  "priorIdentity": "Card Stock Press (R5)",
+  "jobClarity": "Linked cards \u2192 Search \u2192 Export Markdown",
+  "jobUnder3s": true,
+  "flatMaterials": true,
+  "decorativeGradients": 0,
+  "phaseA": {
+    "done": true,
+    "note": "Phase A completed in R5; R6 is integrity-only under locked identity",
+    "identityPath": "docs/IDENTITY.md"
+  },
+  "roundsCounted": 10,
+  "roundShas": [
+    "ccf34dd",
+    "fa173f9",
+    "b956b18",
+    "47f38c2",
+    "e0b0c2b",
+    "027e8b8",
+    "dffb151",
+    "db65f7b",
+    "c7a148e",
+    "3f792be"
+  ],
+  "roundMessages": [
+    "r1: fonts \u2014 denser brand-sub + card body tracking",
+    "r2: contrast \u2014 darker card edges + stamp punch",
+    "r3: buttons \u2014 denser New card + outline Restore",
+    "r4: bar gap \u2014 stamped job strip + desk status chip",
+    "r5: fonts \u2014 denser card titles + editor weight",
+    "r6: contrast \u2014 thicker color tabs + clearer rules",
+    "r7: buttons \u2014 Export weight + Press-this-card assist frame",
+    "r8: bar gap \u2014 pink wiki stock chips + link meta stamp",
+    "r9: contrast \u2014 list stock corners + search edge + active collection",
+    "r10: bar gap \u2014 body density + final A/B vs bar and dream"
+  ],
+  "shotCount": 19,
+  "barShotRounds": [
+    5,
+    10
+  ],
+  "honestNotes": [
+    "Identity stayed Card Stock Press \u2014 no reseed",
+    "Stamped job strip + pink wiki chips close toward dream-target",
+    "Thicker tabs / ruled stock punch physical card craft",
+    "Bar marketing still wins proprietary Gelica/SN Pro serenity",
+    "Coral identity #d94a5c kept (not bar #ff6682)",
+    "Zero decorative color gradients in chrome (index.css verified)",
+    "transitions.dev + Tech5 LinkDraw on real actions"
+  ],
+  "dreamLoop": {
+    "target": "apps/supernotes/.dream-loop/target.png",
+    "targetCopy": "gauntlet/shots-r6/dream-target.png",
+    "roundsUsedToClose": [
+      4,
+      6,
+      8,
+      10
+    ],
+    "blender": false
+  },
+  "transitionsMap": {
+    "success-check": "Export Markdown \u2192 successFlash",
+    "toast": "create/delete/restore/export/collection",
+    "error-state-shake": "zero-hit search + empty export/collection",
+    "skeleton-reveal": "LoadingShell dismiss",
+    "texts-reveal": "brand h1 + card grid",
+    "tabs-sliding": "Cards/List",
+    "number-pop-in": "card count + backlinks",
+    "panel-reveal": "sidebar",
+    "panel-slide/modal": "editor open/close",
+    "card-tilt": "note card hover",
+    "input-clear-dissolve": "search Clear",
+    "LinkDraw-Tech5": "Find links \u2192 graphite path"
+  },
+  "doNotMessageBrandon": true,
+  "branch": "phase-r6-integrity"
+}

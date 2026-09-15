@@ -1,9 +1,10 @@
-# IDENTITY — Inkwell (LOCKED R5)
+# IDENTITY — Inkwell (LOCKED R5 → R6 integrity)
 
 **Aesthetic name:** Card Stock Press  
 **Phase A locked:** 2026-09-14 ~11:50pm PT (R5 WEAK Anshu reseed)  
 **Prior:** Index Drawer (soft/AI-adjacent — discarded)  
-**Do not reseed again in Phase B gauntlet rounds.**
+**Do not reseed again in Phase B gauntlet rounds.**  
+**R6:** integrity-only under Card Stock Press (no Anshu reseed).
 
 ## Feel
 Thick uncoated index cards under the thumb: faint ruled lines, left color tab, rubber-stamp collection marks. Linking is a graphite pencil trail between two cards — not a knowledge-graph product. The press is a desk tool: linked cards → search → export Markdown.
