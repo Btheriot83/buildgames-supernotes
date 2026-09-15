@@ -3,12 +3,12 @@
   --paper: #f7f3eb;
   --paper-2: #efe8dc;
   --paper-card: #fffcf7;
-  --ink: #1a1816;
-  --ink-soft: #2f2b25;
-  --mute: #5c564c;
-  --mute-soft: #7a7368;
-  --line: rgba(26, 24, 22, 0.14);
-  --line-strong: rgba(26, 24, 22, 0.22);
+  --ink: #2b2a2d;
+  --ink-soft: #3a383c;
+  --mute: #5a575c;
+  --mute-soft: #78747a;
+  --line: rgba(43, 42, 45, 0.16);
+  --line-strong: rgba(43, 42, 45, 0.24);
   --coral: #e4576b;
   --coral-deep: #c94155;
   --coral-border: #d94a60;

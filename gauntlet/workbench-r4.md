@@ -39,3 +39,9 @@ Bar baseline: `gauntlet/shots-r4/bar-supernotes-home.png`
 - verdict: Interaction feedback closer to bar polish; still denser tool UI than marketing serenity.
 - commit: 31ec491
 
+## r3 — contrast
+- files: src/index.css (:root ink/mute/line)
+- shot: gauntlet/shots-r4/r3-ink-contrast.png
+- verdict: Body ink now matches bar near-black #2b2a2d; paper still warmer than bar mint wash marketing.
+- commit: 093373f
+
