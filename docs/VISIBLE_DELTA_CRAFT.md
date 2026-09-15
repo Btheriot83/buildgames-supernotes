@@ -1,6 +1,7 @@
 # Visible deltas — Contest craft wave (Inkwell)
 
 Live: https://buildgames-supernotes.vercel.app  
+SHA: `740692c` · deploy `dpl_33hmouiTxDU1Zger6spM35jcGYjT`  
 Shots: `/workspace/build-games/narrow/shots/inkwell-craft/`
 
 1. **Editor hero** — wider press, title scale, desk dims while writing
