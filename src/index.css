@@ -241,10 +241,11 @@ button { cursor: pointer; }
 .btn.text:hover { color: var(--ink); background: transparent; }
 .btn.danger { color: var(--coral-deep); }
 .btn.tiny {
-  padding: 0.38rem 0.75rem;
+  padding: 0.4rem 0.8rem;
   font-size: 0.84rem;
   border-radius: 10px;
   font-weight: 600;
+  letter-spacing: -0.02em;
 }
 .btn.tiny.solid {
   font-weight: 700;

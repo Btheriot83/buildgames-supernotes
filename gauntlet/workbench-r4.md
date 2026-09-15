@@ -70,3 +70,10 @@ Bar baseline: `gauntlet/shots-r4/bar-supernotes-home.png`
 - verdict: Link counts now N↔N like dream-target; bar product cards still cleaner empty chrome.
 - commit: 32e79d4
 
+## r8 — buttons
+- files: src/index.css (.btn.tiny)
+- shot: gauntlet/shots-r4/r8-editor-assist.png
+- recipes: panel-slide/modal←open card; number-pop-in←backlinks
+- verdict: Assist buttons clearer in editor; bar has no equivalent AI assist chrome.
+- commit: fc9c497
+
