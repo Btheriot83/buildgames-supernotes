@@ -1,0 +1,66 @@
+{
+  "slug": "supernotes",
+  "product": "Inkwell",
+  "phase": "B3",
+  "status": "gauntlet_r3_complete",
+  "demoUrl": "https://buildgames-supernotes.vercel.app",
+  "barUrl": "https://supernotes.app/",
+  "path": "/workspace/build-games/apps/supernotes",
+  "identityLocked": "Index Drawer",
+  "identityReseeded": false,
+  "jobClarity": "Write \u2192 Link \u2192 Search \u2192 Export Markdown",
+  "jobUnder3s": true,
+  "flatMaterials": true,
+  "decorativeGradients": 0,
+  "phaseA": {
+    "done": true,
+    "identityPath": "docs/IDENTITY.md"
+  },
+  "phaseB": {
+    "roundsCompleted": 5,
+    "workbench": "gauntlet/workbench.md"
+  },
+  "phaseB2": {
+    "roundsCompleted": 10,
+    "workbench": "gauntlet/workbench-r2.md"
+  },
+  "phaseB3": {
+    "roundsCompleted": 20,
+    "roundsTarget": 20,
+    "workbench": "gauntlet/workbench-r3.md",
+    "visibleDelta": "gauntlet/VISIBLE_DELTA_R3.md",
+    "shots": "gauntlet/shots-r3/",
+    "focus": [
+      "fonts",
+      "contrast",
+      "buttons",
+      "close_ab_vs_live_supernotes",
+      "flat_no_gradient"
+    ],
+    "identityReseeded": false,
+    "barCraftNotes": {
+      "display": "Gelica 400 tight tracking",
+      "body": "SN Pro",
+      "ink": "#2b2a2d",
+      "primaryCta": "#ff6682 weight 700",
+      "secondary": "text Log in"
+    },
+    "ourCraftNotes": {
+      "display": "Literata 600 optical + tight tracking",
+      "body": "Source Sans 3",
+      "ink": "#1a1816",
+      "buttonLadder": "solid New card > outline Export > text Restore"
+    },
+    "finalCriticApprox": 9.0,
+    "note": "Index Drawer kept. 20 rounds on type hierarchy, ink contrast, and primary/secondary/tertiary button weight vs live supernotes.app. Zero decorative gradients."
+  },
+  "live_smoke": {
+    "ok": false,
+    "at_pt": "2026-09-14 9:38 PM PT",
+    "note": "pending redeploy"
+  },
+  "doNotMessageBrandon": true,
+  "branch": "phase-b3-gauntlet-r3",
+  "finishedAtUtc": "2026-09-15T04:38:57Z",
+  "finishedAtPt": "2026-09-14 9:38 PM PT"
+}

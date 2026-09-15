@@ -41,7 +41,7 @@ export function ShellChrome() {
         </nav>
       </div>
       <div className="chrome-actions">
-        <button type="button" className="btn ghost" onClick={() => void resetSample()}>
+        <button type="button" className="btn text" onClick={() => void resetSample()}>
           Restore desk
         </button>
         <button type="button" className="btn export" onClick={() => void exportZip()}>

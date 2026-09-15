@@ -38,7 +38,7 @@ export function SearchBar() {
         className="search-input t-clear"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
-        placeholder="Search linked cards — title, body, tags  ·  press /"
+        placeholder="Search linked cards…"
         autoComplete="off"
       />
       <div className="search-meta">
