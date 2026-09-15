@@ -217,13 +217,14 @@ button { cursor: pointer; }
 .btn.export {
   background: #fff;
   color: var(--coral-deep);
-  border: 1.5px solid var(--coral);
-  font-weight: 750;
-  letter-spacing: -0.03em;
+  border: 2px solid var(--coral);
+  font-weight: 780;
+  letter-spacing: -0.032em;
   box-shadow: none;
+  padding: 0.68rem 1.22rem;
 }
 .btn.export:hover {
-  background: rgba(217, 74, 92, 0.07);
+  background: rgba(217, 74, 92, 0.1);
   border-color: var(--coral-deep);
   color: var(--coral-deep);
 }
@@ -248,14 +249,14 @@ button { cursor: pointer; }
 .btn.text:hover { color: var(--ink); background: var(--paper); text-decoration: none; border-color: var(--ink); }
 .btn.danger { color: var(--coral-deep); }
 .btn.tiny {
-  padding: 0.42rem 0.85rem;
-  font-size: 0.86rem;
-  border-radius: 8px;
-  font-weight: 650;
-  letter-spacing: -0.022em;
+  padding: 0.48rem 0.9rem;
+  font-size: 0.87rem;
+  border-radius: 7px;
+  font-weight: 700;
+  letter-spacing: -0.024em;
 }
 .btn.tiny.solid {
-  font-weight: 750;
+  font-weight: 780;
   border-width: 1.5px;
 }
 .btn.tiny.quiet {
@@ -596,20 +597,21 @@ button { cursor: pointer; }
 .editor-body::placeholder { color: var(--mute-soft); }
 
 .ai-assist {
-  border: 1.5px solid var(--line-strong);
+  border: 2px solid var(--coral-border);
   background: #fff;
   border-radius: 8px;
-  padding: 0.75rem 0.85rem;
+  padding: 0.8rem 0.9rem;
   display: grid;
-  gap: 0.5rem;
+  gap: 0.55rem;
+  box-shadow: 0 2px 0 rgba(217, 74, 92, 0.08);
 }
 .ai-assist h3 {
   margin: 0;
   font-family: var(--font-display);
   font-optical-sizing: auto;
-  font-size: 1.02rem;
-  font-weight: 600;
-  letter-spacing: -0.025em;
+  font-size: 1.06rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
   color: var(--ink);
 }
 .ai-assist .ai-actions { display: flex; flex-wrap: wrap; gap: 0.4rem; }
